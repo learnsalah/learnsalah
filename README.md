@@ -1,4 +1,4 @@
-# Learn Salah ([learnsalah.com](learnsalah.com))
+<img src="learnsalah_header.jpg" alt="drawing" width="500"/>
 
 ## Table of Contents
 
@@ -53,4 +53,5 @@ Any user of this software shall indemnify and hold harmless "Learn Salah"'s deve
 ## Host your own
 
 ## Current Instances
+
 

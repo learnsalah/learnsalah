@@ -1,0 +1,8 @@
+{
+    "name": "Learn Salah App",
+    "short_name": "LearnSalah",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "A PWA to learn salah prayer."
+}
