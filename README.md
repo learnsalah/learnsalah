@@ -1,4 +1,4 @@
-<img src="learnsalah_header.jpg" alt="drawing" width="500"/>
+<img src="learnsalah_header.jpg" alt="drawing" width="2000"/>
 
 ## Table of Contents
 
