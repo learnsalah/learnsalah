@@ -1,6 +1,6 @@
 <img src="learnsalah_header.jpg" alt="drawing" width="2000"/>
 
-### Live at: [www.learnsalah.com](www.learnsalah.com)
+### Live at: [www.learnsalah.com](https://learnsalah.com)
 
 ## Table of Contents
 
