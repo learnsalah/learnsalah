@@ -18,6 +18,7 @@
 
 Our platform underscores the significance of a clean, accessible user interface that ensures quick load times. We uphold our commitment to maintaining a lean and efficient code base, delivering an optimal user experience.
 
+"Learn Salah" is a community project, it does not belong to anyone and is free to use for everyone.
 
 ## Running "Learn Salah"
 

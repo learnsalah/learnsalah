@@ -17,7 +17,7 @@
                     <a href="/" id="logo">
                         Learn Salah
                     </a>
-                    <code style="font-size: 12px; margin-left:10px;" data-tooltip="Might contain bugs" data-placement="bottom" >
+                    <code style="font-size: 12px; margin-left:10px;" >
                         Beta
                     </code>
                 </div>

@@ -18,7 +18,7 @@
                 Contact us!
             </h3>
             <p>
-                We're a decentralised application, 
+                We're a decentralised community effort, 
                 which means that there 
                 isn't a single individual who owns, represents 
                 or is accountable for Learn Salah.
