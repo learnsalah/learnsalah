@@ -3,7 +3,6 @@ const data = [
         id: "fajr",
         name: "Fajr",
         timing: "Dawn Prayer",
-        img: "/images/fajr.png",
         description: 
         `
         Fajr, performed at dawn, includes two units. 
@@ -14,7 +13,6 @@ const data = [
         id: 'dhuhr',
         name: 'Dhuhr',
         timing: "Noon Prayer",
-        img : "/images/dhuhr.png",
         description : 
         `
         Dhuhr, conducted around noon, has four units. 
@@ -25,7 +23,6 @@ const data = [
         id: 'asr',
         name: 'Asr',
         timing: "Afternoon Prayer",
-        img : "/images/asr.png",
         description : 
         `
         Asr, performed in the afternoon, comprises four units. 
@@ -36,7 +33,6 @@ const data = [
         id: 'maghrib',
         name: 'Maghrib',
         timing: "Sunset Prayer",
-        img : "/images/maghrib.png",
         description : 
         `
         Maghrib, performed at sunset, contains three units. 
@@ -47,7 +43,6 @@ const data = [
         id: 'isha',
         name: 'Isha',
         timing: "Night Prayer",
-        img : "/images/isha.png",
         description : 
         `
         Isha, conducted at night, consists of four units. 

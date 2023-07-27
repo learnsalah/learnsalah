@@ -13,11 +13,15 @@
     <div>   
         <div style="background-color:#218C74;">
             <div class="container" style="display:flex;justify-content:space-between;align-items:stretch;background-color:none;">
-                <div>
+                <div style="display:inline-flex; align-items:center;">
                     <a href="/" id="logo">
-                        Learn Salah 
+                        Learn Salah
                     </a>
+                    <code style="font-size: 12px; margin-left:10px;" data-tooltip="Might contain bugs" data-placement="bottom" >
+                        Beta
+                    </code>
                 </div>
+                
 
                 <div 
                 class="nav-item"
@@ -64,21 +68,9 @@
             <div class="container" style="margin-top: 20px;">
             {#each breadcrumbs as { url, text }, i (i)}
                 {#if i !== 0} 
-                    <svg
-                    style="margin-left:8px;margin-right:2px;" 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    width="12" 
-                    height="12" 
-                    viewBox="0 0 23 40" 
-                    focusable="false" aria-hidden="true">
-                        <path   fill="#000" 
-                                d="M0 0h8l15 20-15 20H0l15-20z">
-                        </path>
-                    </svg> 
+                    <span class="arrow"></span>
                 {/if}
-                <a
-                href={url}
-                >{text}</a>
+                <a href={url}>{text}</a>
             {/each}
             </div>
         {/if}
@@ -162,6 +154,20 @@ header{
 .menu-outer li {
     list-style: none;
     margin: 5px 0 20px 0;
+}
+
+.arrow {
+    -webkit-transform: rotate(-45deg) scale(1);
+    -ms-transform: rotate(-45deg) scale(1);
+    transform: rotate(-45deg) scale(1);
+    border-bottom: 2px solid #1e272e;
+    border-right: 2px solid #1e272e;
+    content: "";
+    display: inline-block;
+    height: 8px;
+    margin: 0 8px 0 10px;
+    vertical-align: middle;
+    width: 8px;
 }
 
 </style>

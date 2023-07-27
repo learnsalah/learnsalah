@@ -16,6 +16,7 @@ export default [
         `
         Glory be to my lord the Supreme.
         `,
-        img : "/images/ruku.png"
+        img : "/images/ruku.jpg",
+        instruction : ""
     }
 ];

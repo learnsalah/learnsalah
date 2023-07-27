@@ -16,7 +16,8 @@ export default [
         `
         May Allah's peace and mercy be upon you
         `,
-        img : ""
+        img : "/images/sitting_right.jpg",
+        instruction : ""
     },
     { 
         stage: 'taslim', 
@@ -35,6 +36,7 @@ export default [
         `
         May Allah's peace and mercy be upon you
         `,
-        img : ""
+        img : "/images/sitting_left.jpg",
+        instruction : ""
     }
 ];

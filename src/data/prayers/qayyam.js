@@ -16,7 +16,8 @@ export default [
         `
         Allah hears whoever praises Him.
         `,
-        img : "/images/standing.png"
+        img : "/images/standing.jpg",
+        instruction : ""
     },
     { 
         stage: 'qayyam', 
@@ -35,6 +36,7 @@ export default [
         `
         Our Lord, and all the praises are for You.
         `,
-        img : ""
+        img : "/images/standing3.jpg",
+        instruction : ""
     }
 ];

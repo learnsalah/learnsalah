@@ -16,7 +16,8 @@ export default [
         `
         O Allah, send prayers upon Muhammad
         `,
-        img : "/images/sitting2.png"
+        img : "/images/sitting2.jpg",
+        instruction : ""
     },
     { 
         stage: 'durood', 
@@ -35,7 +36,8 @@ export default [
         `
         And upon the family of Muhammad
         `,
-        img : "/images/sitting2.png"
+        img : "/images/sitting2.jpg",
+        instruction : ""
     },
     { 
         stage: 'durood', 
@@ -54,7 +56,8 @@ export default [
         `
         As You have sent prayers upon Ibrahim
         `,
-        img : "/images/sitting2.png"
+        img : "/images/sitting2.jpg",
+        instruction : ""
     },
     { 
         stage: 'durood', 
@@ -73,7 +76,8 @@ export default [
         `
         And upon the family of Ibrahim
         `,
-        img : "/images/sitting2.png"
+        img : "/images/sitting2.jpg",
+        instruction : ""
     },
     { 
         stage: 'durood', 
@@ -92,6 +96,7 @@ export default [
         `
         Truly, You are Praiseworthy and Glorious.
         `,
-        img : "/images/sitting2.png"
+        img : "/images/sitting2.jpg",
+        instruction : ""
     }
 ];

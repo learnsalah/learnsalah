@@ -16,45 +16,88 @@ export default [
         `
         All compliments are due to Allah
         `,
-        img : "/images/sitting2.png"
+        img : "/images/sitting2.jpg",
+        instruction : ""
     },
     { 
         stage: 'tashahhud', 
         name: 'Tashahhud',
         count: 1,
-        duration : 5500,
+        duration : 2800,
         text_arabic : 
         `
-        السَّلاَمُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ
+        السَّلاَمُ عَلَيْكَ أَيُّهَا النَّبِيُّ
         `,
         text_transliteration : 
-        `
-        Assalamu 'alaika ayyuhan-nabiyyu wa rahmatullahi wa barakatuhu
+        ` 
+        Assalamu 'alaika ayyuhan-nabiyyu
         `,
         text_eng : 
         `
-        Peace be upon you, O Prophet, and Allah's mercy and blessings
+        Peace be upon you, O Prophet
         `,
-        img : "/images/sitting2.png"
+        img: "/images/sitting2.jpg",
+        instruction : ""
     },
     { 
         stage: 'tashahhud', 
         name: 'Tashahhud',
         count: 1,
-        duration : 5000,
+        duration : 2500,
         text_arabic : 
         `
-        السَّلاَمُ عَلَيْنَا وَعَلَى عِبَادِ اللهِ الصَّالِحِينَ
+        وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ
         `,
         text_transliteration : 
-        `
-        Assalamu 'alaina wa 'ala ibadillahis-salihin
+        ` 
+        wa rahmatullahi wa barakatuhu
         `,
         text_eng : 
         `
-        Peace be upon us and upon all of Allah's righteous servants
+        and Allah's mercy and blessings
         `,
-        img : "/images/sitting2.png"
+        img: "/images/sitting2.jpg",
+        instruction : ""
+    },
+    { 
+        stage: 'tashahhud', 
+        name: 'Tashahhud',
+        count: 1,
+        duration : 2000,
+        text_arabic : 
+        `
+        السَّلاَمُ عَلَيْنَا
+        `,
+        text_transliteration : 
+        ` 
+        Assalamu 'alaina
+        `,
+        text_eng : 
+        `
+        Peace be upon us
+        `,
+        img: "/images/sitting2.jpg",
+        instruction : ""
+    },
+    { 
+        stage: 'tashahhud', 
+        name: 'Tashahhud',
+        count: 1,
+        duration : 3500,
+        text_arabic : 
+        `
+        وَعَلَى عِبَادِ اللهِ الصَّالِحِينَ
+        `,
+        text_transliteration : 
+        ` 
+        wa 'ala ibadillahis-salihin
+        `,
+        text_eng : 
+        `
+        and upon all of Allah's righteous servants
+        `,
+        img: "/images/sitting2.jpg",
+        instruction : ""
     },
     { 
         stage: 'tashahhud', 
@@ -73,25 +116,47 @@ export default [
         `
         I bear witness that there is no deity except Allah
         `,
-        img : "/images/sitting2.png"
+        img : "/images/sitting2.jpg",
+        instruction : ""
     },
     { 
         stage: 'tashahhud', 
         name: 'Tashahhud',
         count: 1,
-        duration : 5500,
+        duration : 2700,
         text_arabic : 
         `
-        وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ
+        وَأَشْهَدُ أَنَّ مُحَمَّدًا
         `,
         text_transliteration : 
-        `
-        Wa ash-hadu anna Muhammadan 'abduhu wa rasuluhu
+        ` 
+        Wa ash-hadu anna Muhammadan
         `,
         text_eng : 
         `
-        And I bear witness that Muhammad is His servant and messenger
+        And I bear witness that Muhammad
         `,
-        img : "/images/sitting2.png"
+        img: "/images/sitting2.jpg",
+        instruction : ""
+    },
+    { 
+        stage: 'tashahhud', 
+        name: 'Tashahhud',
+        count: 1,
+        duration : 2700,
+        text_arabic : 
+        `
+        عَبْدُهُ وَرَسُولُهُ
+        `,
+        text_transliteration : 
+        ` 
+        'abduhu wa rasuluhu
+        `,
+        text_eng : 
+        `
+        is His servant and messenger
+        `,
+        img: "/images/sitting2.jpg",
+        instruction : ""
     }
 ];

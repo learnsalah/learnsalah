@@ -25,21 +25,6 @@
                 Prayer time calculation using <a href="https://github.com/batoulapps/adhan-js">adhan-js</a>
             </li>
             <li>
-                <a href="https://www.flaticon.com/free-icons/isha" title="isha icons">Isha icons created by Freepik - Flaticon</a>
-            </li>
-            <li>
-                <a href="https://www.flaticon.com/free-icons/fajr" title="fajr icons">Fajr icons created by Freepik - Flaticon</a>
-            </li>
-            <li>
-                <a href="https://www.flaticon.com/free-icons/dhuhr" title="dhuhr icons">Dhuhr icons created by Freepik - Flaticon</a>
-            </li>
-            <li>
-                <a href="https://www.flaticon.com/free-icons/asr" title="asr icons">Asr icons created by Freepik - Flaticon</a>
-            </li>
-            <li>
-                <a href="https://www.flaticon.com/free-icons/maghrib" title="maghrib icons">Maghrib icons created by Freepik - Flaticon</a>
-            </li>
-            <li>
                 The
                 <a href="https://github.com/twitter/twemoji/blob/master/assets/svg/1f932.svg"> 
                     emoji graphic

@@ -196,10 +196,15 @@
 </div>
 
 
-<div class="containerx">
+<div class="instruction_container">
     <div class="imageContainer">
-        <img src="{prayer[currentStageIndex].img}" class="responsiveImage">
+        <img src="{prayer[currentStageIndex].img}" alt="prayer pose" class="responsiveImage">
     </div>
+    
+    <div class="prayerInstruction">
+        {prayer[currentStageIndex].instruction}
+    </div>
+
 
     <div class="prayerArabicText">
         {prayer[currentStageIndex].text_arabic}
@@ -207,9 +212,9 @@
 
     <div class="prayerTransliterationText">
         {#if prayer[currentStageIndex].count > 1}
-        <code style="font-weight:900;font-size:medium;height:30px;margin-right:15px;">
-            {prayer[currentStageIndex].count}&times;
-        </code>
+            <span style="color:#218c74;">
+                {prayer[currentStageIndex].count}&times;
+            </span>
         {/if}
         {prayer[currentStageIndex].text_transliteration}
     </div>
@@ -272,8 +277,7 @@
 
 <style>
     
-    .containerx {
-        /* background-color: aqua; */
+    .instruction_container {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -285,9 +289,10 @@
 
     .imageContainer {
         width: 100%;
-        height: 45vmin; /* Adjust this value based on your needs */
+        height: 42vmin; 
         display: flex;
         justify-content: center;
+        margin-bottom: 15px;
     }
 
     .responsiveImage {
@@ -296,18 +301,26 @@
         object-fit: contain;
     }
 
+    .prayerInstruction{
+        font-size: 4vmin;
+        color: #218c74;
+        font-style: oblique;
+        font-weight: 900;
+        margin-bottom: 20px;
+    }
+
     .prayerArabicText {
-        font-size: 5vmin; /* adjust based on your needs */
+        font-size: 5vmin; 
         font-family:'Times New Roman', Times, serif;
     }
 
     .prayerTransliterationText {
-        font-size: 10vmin; /* adjust based on your needs */
+        font-size: 10vmin; 
         font-weight: 500;
     }
 
     .prayerEnglishText {
-        font-size: 5vmin; /* adjust based on your needs */
+        font-size: 5vmin; 
     }
 
     .btn{
@@ -325,6 +338,7 @@
     .zoom-in-out-box {
         animation: zoom-in-zoom-out 0.3s ease;
     }
+
     
     @keyframes zoom-in-zoom-out {
         0% {

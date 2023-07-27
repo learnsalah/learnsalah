@@ -10,13 +10,14 @@ export default [
         `,
         text_transliteration : 
         `
-        Qul a'uudhu birabbil-falaq
+        Qul a'oodhu bi rabbil-falaq
         `,
         text_eng : 
         `
         Say, "I seek refuge in the Lord of daybreak
         `,
-        img : "/images/standing2.png"
+        img : "/images/standing2.jpg",
+        instruction : ""
     },
     { 
         stage: 'alqayyam', 
@@ -35,8 +36,8 @@ export default [
         `
         From the evil of that which He created
         `,
-        img : "/images/standing2.png"
-
+        img : "/images/standing2.jpg",
+        instruction : ""
     },
     { 
         stage: 'alqayyam', 
@@ -55,8 +56,8 @@ export default [
         `
         And from the evil of darkness when it settles
         `,
-        img : "/images/standing2.png"
-
+        img : "/images/standing2.jpg",
+        instruction : ""
     },
     { 
         stage: 'alqayyam', 
@@ -69,13 +70,14 @@ export default [
         `,
         text_transliteration : 
         `
-        Wa min sharri n-naffathati fi l-'uqad
+        Wa min sharri an-naffathaati fee al-'uqad
         `,
         text_eng : 
         `
         And from the evil of the blowers in knots
         `,
-        img : "/images/standing2.png"
+        img : "/images/standing2.jpg",
+        instruction : ""
     },
     { 
         stage: 'alqayyam', 
@@ -94,7 +96,7 @@ export default [
         `
         And from the evil of an envier when he envies."
         `,
-        img : "/images/standing2.png"
-
+        img : "/images/standing2.jpg",
+        instruction : ""
     }
 ];

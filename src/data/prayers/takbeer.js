@@ -7,6 +7,7 @@ export default [
         text_arabic: "الله أكبر",
         text_transliteration: "Allahu Akbar",
         text_eng: "God is most great.",
-        img: "/images/standing.png",
+        img: "/images/standing.jpg",
+        instruction : ""
     }
 ];
