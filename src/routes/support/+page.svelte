@@ -34,7 +34,7 @@
                     We uphold total transparency regarding our costs and the donations we receive
                 </li>
                 <li>
-                    By donating, you're contributing to the upkeep of this server instance for Learn Salah.
+                    By donating, you're contributing to the upkeep of this server instance for Learn Salah
                 </li>
                 
             </ul>

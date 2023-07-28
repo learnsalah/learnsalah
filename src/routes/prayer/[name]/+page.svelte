@@ -337,7 +337,7 @@
             class:zoom-in-out-box={animatePlaybackSpeedButton}
             style="position: relative; width: 60px;">
             <img style="position: absolute; width: 100%; height: 100%;" src="/icons/stopwatch.svg">
-            <span style="position: absolute; display: flex; justify-content: center; align-items: center; width: 100%; height: 109%; font-weight:900;color:#1e272e; font-size:1rem;">
+            <span style="position: absolute; display: flex; justify-content: center; align-items: center; width: 100%; height: 110%; font-weight:900;color:#1e272e; font-size:1.23rem;">
                 {playbackSpeeds[playbackSpeedSelectedIndex].display}
             </span>
         </div>
