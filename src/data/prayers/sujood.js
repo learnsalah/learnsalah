@@ -30,7 +30,7 @@ export default [
         text_transliteration : "Allahu Akbar",
         text_eng : "God is most great.",
         img : "/images/sitting.jpg",
-        instruction : "While sitting back up say"
+        instruction : "As you sit back up say"
     },
     {
         stage: 'sujood',

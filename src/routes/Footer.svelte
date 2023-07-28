@@ -38,7 +38,7 @@
     </a>
 
     <p>
-        All content is available under the MIT License.
+        Source Code is available under the MIT License.
     </p>
 
 

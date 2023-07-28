@@ -98,17 +98,45 @@
         
         
     };
+
     
     onMount(() => {
-        
+
+
+        const handleVisibilityChange = () => {
+
+            // if document (e.g. tab) becomes hidden
+            if (document.hidden) {
+
+                // stop autoplay when tab is changed
+                stopAutoPlay();
+
+                // disable noSleep when tab is changed
+                noSleep.disable(); 
+
+            } 
+        }
+
+        // enable visibilitychange listener to detect if the browser tab was 
+        // switched or if the browser was closed. in those cases we need to e.g.
+        // stop the auto play 
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+
+        // instance of noSleep
         noSleep = new NoSleep();
         
         return () => {
-            noSleep.disable(); // Cleanup on component unmount
+
+            // disable visibilitychange listener on component unmount
+            document.removeEventListener('visibilitychange', handleVisibilityChange);
+
+            // disable noSleep on component unmount
+            noSleep.disable(); 
         };
     });
     
     onDestroy(() => {
+
         // Ensure auto-play stops when the component is destroyed
         if (isAutoPlaying) {
             stopAutoPlay();

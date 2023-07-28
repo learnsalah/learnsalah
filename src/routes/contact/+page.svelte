@@ -23,7 +23,7 @@
                 isn't a single individual who owns, represents 
                 or is accountable for Learn Salah.
             </p>
-            
+
             <p>
                 Should you encounter any problems, please don't 
                 hesitate to open an issue here:

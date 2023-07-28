@@ -39,64 +39,70 @@ export default [
         img : "/images/standing2.jpg",
         instruction : ""
     },
-    { 
-        stage: 'alqayyam', 
+    {
+        stage: 'alqayyam',
         name: 'Surah Al Falaq',
         count: 1,
-        duration : 3500,
-        text_arabic : 
-        `
-        وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ
-        `,
-        text_transliteration : 
-        `
-        Wa min sharri ghasiqin idha waqab
-        `,
-        text_eng : 
-        `
-        And from the evil of darkness when it settles
-        `,
-        img : "/images/standing2.jpg",
+        duration: 1600,
+        text_arabic: "وَمِن شَرِّ",
+        text_transliteration: "Wa min sharri",
+        text_eng: "And from the evil",
+        img: "/images/standing2.jpg",
         instruction : ""
     },
-    { 
-        stage: 'alqayyam', 
-        name: 'Surah Al Falaq', 
+    {
+        stage: 'alqayyam',
+        name: 'Surah Al Falaq',
         count: 1,
-        duration : 4500,
-        text_arabic : 
-        `
-        وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ
-        `,
-        text_transliteration : 
-        `
-        Wa min sharri an-naffathaati fee al-'uqad
-        `,
-        text_eng : 
-        `
-        And from the evil of the blowers in knots
-        `,
-        img : "/images/standing2.jpg",
+        duration: 1900,
+        text_arabic: "غَاسِقٍ إِذَا وَقَبَ",
+        text_transliteration: "ghasiqin idha waqab",
+        text_eng: "of darkness when it settles",
+        img: "/images/standing2.jpg",
         instruction : ""
     },
-    { 
-        stage: 'alqayyam', 
-        name: 'Surah Al Falaq', 
+    {
+        stage: 'alqayyam',
+        name: 'Surah Al Falaq',
         count: 1,
-        duration : 4500,
-        text_arabic : 
-        `
-        وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ
-        `,
-        text_transliteration : 
-        `
-        Wa min sharri hasidin idha hasad
-        `,
-        text_eng : 
-        `
-        And from the evil of an envier when he envies."
-        `,
-        img : "/images/standing2.jpg",
+        duration: 2250,
+        text_arabic: "وَمِن شَرِّ",
+        text_transliteration: "Wa min sharri",
+        text_eng: "And from the evil",
+        img: "/images/standing2.jpg",
+        instruction : ""
+    },
+    {
+        stage: 'alqayyam',
+        name: 'Surah Al Falaq',
+        count: 1,
+        duration: 2250,
+        text_arabic: "النَّفَّاثَاتِ فِي الْعُقَدِ",
+        text_transliteration: "an-naffathaati fee al-'uqad",
+        text_eng: "of the blowers in knots",
+        img: "/images/standing2.jpg",
+        instruction : ""
+    },
+    {
+        stage: 'alqayyam',
+        name: 'Surah Al Falaq',
+        count: 1,
+        duration: 2400,
+        text_arabic: "وَمِن شَرِّ حَاسِدٍ",
+        text_transliteration: "Wa min sharri hasidin",
+        text_eng: "And from the evil of an envier",
+        img: "/images/standing2.jpg",
+        instruction : ""
+    },
+    {
+        stage: 'alqayyam',
+        name: 'Surah Al Falaq',
+        count: 1,
+        duration: 2100,
+        text_arabic: "إِذَا حَسَدَ",
+        text_transliteration: "idha hasad",
+        text_eng: "when he envies.",
+        img: "/images/standing2.jpg",
         instruction : ""
     }
 ];
