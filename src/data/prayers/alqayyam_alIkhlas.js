@@ -3,7 +3,7 @@ export default [
         stage: 'alqayyam', 
         name: 'Surah Al Ikhlas',
         count: 1,
-        duration : 3300,
+        duration : 4000,
         text_arabic : 
         `
         قُلْ هُوَ ٱللَّهُ أَحَدٌ
@@ -43,7 +43,7 @@ export default [
         stage: 'alqayyam', 
         name: 'Surah Al Ikhlas',
         count: 1,
-        duration : 3000,
+        duration : 4000,
         text_arabic : 
         `
         لَمْ يَلِدْ وَلَمْ يُولَدْ
@@ -63,7 +63,7 @@ export default [
         stage: 'alqayyam', 
         name: 'Surah Al Ikhlas', 
         count: 1,
-        duration : 4000,
+        duration : 5000,
         text_arabic : 
         `وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌ
         `,

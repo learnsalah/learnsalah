@@ -3,7 +3,7 @@ export default [
         stage: 'tashahhud', 
         name: 'Tashahhud',
         count: 1,
-        duration : 3000,
+        duration : 4000,
         text_arabic : 
         `
         التَّحِيَّاتُ لِلّهِ
@@ -23,7 +23,7 @@ export default [
         stage: 'tashahhud', 
         name: 'Tashahhud',
         count: 1,
-        duration : 2800,
+        duration : 4500,
         text_arabic : 
         `
         السَّلاَمُ عَلَيْكَ أَيُّهَا النَّبِيُّ
@@ -43,7 +43,7 @@ export default [
         stage: 'tashahhud', 
         name: 'Tashahhud',
         count: 1,
-        duration : 2500,
+        duration : 4000,
         text_arabic : 
         `
         وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ
@@ -63,7 +63,7 @@ export default [
         stage: 'tashahhud', 
         name: 'Tashahhud',
         count: 1,
-        duration : 2000,
+        duration : 2500,
         text_arabic : 
         `
         السَّلاَمُ عَلَيْنَا
@@ -83,7 +83,7 @@ export default [
         stage: 'tashahhud', 
         name: 'Tashahhud',
         count: 1,
-        duration : 3500,
+        duration : 5000,
         text_arabic : 
         `
         وَعَلَى عِبَادِ اللهِ الصَّالِحِينَ
@@ -103,7 +103,7 @@ export default [
         stage: 'tashahhud', 
         name: 'Tashahhud',
         count: 1,
-        duration : 4500,
+        duration : 5000,
         text_arabic : 
         `
         أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ اللهُ
@@ -123,7 +123,7 @@ export default [
         stage: 'tashahhud', 
         name: 'Tashahhud',
         count: 1,
-        duration : 2700,
+        duration : 4000,
         text_arabic : 
         `
         وَأَشْهَدُ أَنَّ مُحَمَّدًا
@@ -143,7 +143,7 @@ export default [
         stage: 'tashahhud', 
         name: 'Tashahhud',
         count: 1,
-        duration : 2700,
+        duration : 4000,
         text_arabic : 
         `
         عَبْدُهُ وَرَسُولُهُ

@@ -19,12 +19,30 @@
     
     let currentStageIndex = 0;
     
-    let animateExitCross      = false;
-    let animatePlayButton     = false;
-    let animatePauseButton    = false;
+    let animateExitCross                = false;
+    let animatePlayButton               = false;
+    let animatePauseButton              = false;
+    let animatePlaybackSpeedButton      = false;
     
     let noSleep;
     let noSleepEnabled = false;
+
+    // let playbackSpeeds = [1, 1.5 , 0.5]
+    let playbackSpeeds = [
+        {
+            display : "1",
+            multiplier : 1
+        },
+        {
+            display : "0.5",
+            multiplier : 2
+        },
+        {
+            display : "1.5",
+            multiplier : 2/3
+        }
+    ]
+    let playbackSpeedSelectedIndex = 0;
     
     
     const startAutoPlay = () => {
@@ -62,7 +80,7 @@
                 // Re-trigger the function after the current stage's duration
                 startAutoPlay();
                 
-            }, prayer[currentStageIndex].duration);
+            }, playbackSpeeds[playbackSpeedSelectedIndex].multiplier * prayer[currentStageIndex].duration);
         }
     };
     
@@ -97,6 +115,24 @@
         }
         
         
+    };
+
+    const changePlaybackSpeed = () => {
+
+        
+        // animate play button bouncing
+        animatePlaybackSpeedButton = true;
+        autoPlayIntervalId = setTimeout(() => {
+            animatePlaybackSpeedButton = false;
+        }, 300);
+
+        // increase index by 1
+        playbackSpeedSelectedIndex++;
+
+        // modulo this with total length of playbackSpeeds array
+        playbackSpeedSelectedIndex = playbackSpeedSelectedIndex % playbackSpeeds.length;
+
+
     };
 
     
@@ -295,6 +331,17 @@
 
         {/if}
 
+        <div class="btn"
+            on:click={changePlaybackSpeed}
+            on:keyup={changePlaybackSpeed}
+            class:zoom-in-out-box={animatePlaybackSpeedButton}
+            style="position: relative; width: 60px;">
+            <img style="position: absolute; width: 100%; height: 100%;" src="/icons/stopwatch.svg">
+            <span style="position: absolute; display: flex; justify-content: center; align-items: center; width: 100%; height: 109%; font-weight:900;color:#1e272e; font-size:1rem;">
+                {playbackSpeeds[playbackSpeedSelectedIndex].display}
+            </span>
+        </div>
+    
 
 
     </div>
@@ -357,6 +404,7 @@
         width: 4rem;
         display: flex;
         justify-content: center;
+        /* align-items:end; */
     }
     
     .btn:hover{

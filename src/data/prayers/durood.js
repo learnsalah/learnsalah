@@ -3,7 +3,7 @@ export default [
         stage: 'durood', 
         name: 'Durood',
         count: 1,
-        duration : 3500,
+        duration : 4500,
         text_arabic : 
         `
         اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ
@@ -23,7 +23,7 @@ export default [
         stage: 'durood', 
         name: 'Durood',
         count: 1,
-        duration : 3000,
+        duration : 4000,
         text_arabic : 
         `
         وَعَلَى آلِ مُحَمَّدٍ
@@ -43,7 +43,7 @@ export default [
         stage: 'durood', 
         name: 'Durood',
         count: 1,
-        duration : 3500,
+        duration : 4500,
         text_arabic : 
         `
         كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ
@@ -63,7 +63,7 @@ export default [
         stage: 'durood', 
         name: 'Durood',
         count: 1,
-        duration : 3000,
+        duration : 4000,
         text_arabic : 
         `
         وَعَلَى آلِ إِبْرَاهِيمَ
@@ -83,7 +83,7 @@ export default [
         stage: 'durood', 
         name: 'Durood',
         count: 1,
-        duration : 4000,
+        duration : 5000,
         text_arabic : 
         `
         إِنَّكَ حَمِيدٌ مَّجِيدٌ

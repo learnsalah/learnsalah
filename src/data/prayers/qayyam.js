@@ -3,7 +3,7 @@ export default [
         stage: 'qayyam', 
         name: 'Qayyam',
         count: 1,
-        duration : 3000,
+        duration : 5000,
         text_arabic : 
         `
         سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ
@@ -23,7 +23,7 @@ export default [
         stage: 'qayyam', 
         name: 'Qayyam',
         count: 1,
-        duration : 3000,
+        duration : 5000,
         text_arabic : 
         `
         رَبَّنَا وَلَكَ الْحَمْدُ 
