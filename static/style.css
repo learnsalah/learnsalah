@@ -1,4 +1,6 @@
-
+html, body {
+    color: #1e272e;
+}
 
 a {
     text-decoration: underline;

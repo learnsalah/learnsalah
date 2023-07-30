@@ -33,7 +33,11 @@
                 </li>
                 <li>
                     Should you come across any inaccuracies, we warmly 
-                    invite you to contact us without hesitation.
+                    invite you to 
+                    <a href="/contact">
+                    contact us 
+                    </a>
+                    without hesitation.
                 </li>
             </ul>
         </section>
