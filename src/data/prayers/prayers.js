@@ -5,13 +5,16 @@ import alqayyam_alIkhlas from './alqayyam_alIkhlas';
 import ruku from './ruku';
 import qayyam from './qayyam';
 import sujood from './sujood';
+import sujood2 from './sujood2';
 import alqayyam_alFalaq from './alqayyam_alFalaq';
 import tashahhud from './tashahhud';
 import durood from './durood';
 import taslim from './taslim';
+import dua_thana from './dua_thana';
 
 const fajr = [
     ...takbeer,
+    ...dua_thana,
     ...alqayyam_istiadhah, 
     ...alqayyam_alFatihah,
     ...alqayyam_alIkhlas,
@@ -24,7 +27,7 @@ const fajr = [
     ...takbeer,
     ...ruku,
     ...qayyam,
-    ...sujood,
+    ...sujood2,
     ...tashahhud,
     ...durood,
     ...taslim
@@ -32,6 +35,7 @@ const fajr = [
 
 const dhuhr = [
     ...takbeer,
+    ...dua_thana,
     ...alqayyam_istiadhah, 
     ...alqayyam_alFatihah,
     ...alqayyam_alIkhlas,
@@ -44,7 +48,7 @@ const dhuhr = [
     ...takbeer,
     ...ruku,
     ...qayyam,
-    ...sujood,
+    ...sujood2,
     ...tashahhud,
     ...alqayyam_alFatihah,
     ...takbeer,
@@ -55,7 +59,7 @@ const dhuhr = [
     ...takbeer,
     ...ruku,
     ...qayyam,
-    ...sujood,
+    ...sujood2,
     ...tashahhud,
     ...durood,
     ...taslim
@@ -66,6 +70,7 @@ const isha = dhuhr;
 
 const maghrib = [
     ...takbeer,
+    ...dua_thana,
     ...alqayyam_istiadhah, 
     ...alqayyam_alFatihah,
     ...alqayyam_alIkhlas,
@@ -78,13 +83,13 @@ const maghrib = [
     ...takbeer,
     ...ruku,
     ...qayyam,
-    ...sujood,
+    ...sujood2,
     ...tashahhud,
     ...alqayyam_alFatihah,
     ...takbeer,
     ...ruku,
     ...qayyam,
-    ...sujood,
+    ...sujood2,
     ...tashahhud,
     ...durood,
     ...taslim
