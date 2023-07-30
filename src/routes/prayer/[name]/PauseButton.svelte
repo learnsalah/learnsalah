@@ -18,7 +18,7 @@
 
 <div 
 class="btn"
-on:click={stopAutoPlay} 
+on:click={stopAutoPlay}
 on:keyup={stopAutoPlay}
 >
 

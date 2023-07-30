@@ -13,6 +13,8 @@
 	import PlayButton from './PlayButton.svelte';
 	import PauseButton from './PauseButton.svelte';
 	import PlaybackSpeedButton from './PlaybackSpeedButton.svelte';
+	import InstructionContainer from './InstructionContainer.svelte';
+	import FontSizeButton from './FontSizeButton.svelte';
     
     export let data;
     let prayer = data.prayer.prayer;
@@ -210,115 +212,41 @@
 </div>
 
 
-<div class="instruction_container">
-    <div class="imageContainer">
-        <img src="{prayer[currentStageIndex].img}" alt="prayer pose" class="responsiveImage">
-    </div>
+
+<InstructionContainer
+{prayer}
+{currentStageIndex}
+/>
+
+
+<div style="position: fixed; z-index: 2; display:flex; justify-content:flex-start; bottom: 25px; ">
     
-    <div class="prayerInstruction">
-        {prayer[currentStageIndex].instruction}
-    </div>
-
-
-    <div class="prayerArabicText">
-        {prayer[currentStageIndex].text_arabic}
-    </div>
-
-    <div class="prayerTransliterationText">
-        {#if prayer[currentStageIndex].count > 1}
-            <span style="color:#218c74;">
-                {prayer[currentStageIndex].count}&times;
-            </span>
-        {/if}
-        {prayer[currentStageIndex].text_transliteration}
-    </div>
+    {#if isAutoPlaying}
+        <PauseButton
+        {isAutoPlaying}
+        bind:animatePauseButton={animatePauseButton}
+        on:stopAutoPlay={stopAutoPlay}
+        />
+    {:else}
     
-    <div class="prayerEnglishText">
-        {prayer[currentStageIndex].text_eng}
-    </div>
+        <PlayButton
+        {isAutoPlaying}
+        bind:animatePlayButton={animatePlayButton}
+        on:startAutoPlay={startAutoPlay}
+        />
+    {/if}
+    <PlaybackSpeedButton
+    bind:autoPlayIntervalId={autoPlayIntervalId}
+    bind:playbackSpeedSelectedIndex={playbackSpeedSelectedIndex}
+    {playbackSpeeds}
+    />
+
+    <FontSizeButton />
+
 </div>
 
 
-
-    <div style="position: fixed; z-index: 2; display:flex; justify-content:flex-start; bottom: 25px; ">
-        
-
-        {#if isAutoPlaying}
-
-            <PauseButton
-            {isAutoPlaying}
-            bind:animatePauseButton={animatePauseButton}
-            on:stopAutoPlay={stopAutoPlay}
-            />
-
-        {:else}
-        
-            <PlayButton
-            {isAutoPlaying}
-            bind:animatePlayButton={animatePlayButton}
-            on:startAutoPlay={startAutoPlay}
-            />
-
-        {/if}
-
-        <PlaybackSpeedButton
-        bind:autoPlayIntervalId={autoPlayIntervalId}
-        bind:playbackSpeedSelectedIndex={playbackSpeedSelectedIndex}
-        {playbackSpeeds}
-        />
-    
-
-
-    </div>
-
-
 <style>
-    
-    .instruction_container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 2em;
-        box-sizing: border-box;
-    }
-
-    .imageContainer {
-        width: 100%;
-        height: 40vmin; 
-        display: flex;
-        justify-content: center;
-        margin-bottom: 15px;
-    }
-
-    .responsiveImage {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-    }
-
-    .prayerInstruction{
-        font-size: 4vmin;
-        color: #218c74;
-        font-style: oblique;
-        font-weight: 900;
-        margin-bottom: 20px;
-    }
-
-    .prayerArabicText {
-        font-size: 5vmin; 
-        font-family:'Times New Roman', Times, serif;
-    }
-
-    .prayerTransliterationText {
-        font-size: 10vmin; 
-        font-weight: 500;
-    }
-
-    .prayerEnglishText {
-        font-size: 5vmin; 
-    }
 
     :global(.btn){
         background-color: white;
