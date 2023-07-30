@@ -5,7 +5,6 @@
     const dispatch = createEventDispatcher();
 
     export let isAutoPlaying : boolean;
-    export let autoPlayIntervalId;
     export let currentStageIndex : number;
     export let prayer;
 
@@ -13,11 +12,6 @@
         // If a user manually triggered nextStage, stop auto play
         if (manual && isAutoPlaying) {
             dispatch('stopAutoPlay');
-        }
-        
-        // Clear the interval before setting up a new one
-        if (autoPlayIntervalId) {
-            clearTimeout(autoPlayIntervalId);
         }
         
         if (currentStageIndex < prayer.length - 1) {
@@ -28,12 +22,6 @@
             return;
         }
         
-        // Setup the interval for the new stage
-        if (isAutoPlaying) {
-            autoPlayIntervalId = setTimeout(() => {
-                nextStage();
-            }, prayer[currentStageIndex].duration);
-        }
     };
 </script>
 

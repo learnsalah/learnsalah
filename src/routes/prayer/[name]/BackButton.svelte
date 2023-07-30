@@ -5,18 +5,12 @@
     const dispatch = createEventDispatcher();
 
     export let isAutoPlaying : boolean;
-    export let autoPlayIntervalId;
     export let currentStageIndex : number;
 
     const prevStage = (manual = false) => {
         // If a user manually triggered prevStage, stop auto play
         if (manual && isAutoPlaying) {
             dispatch('stopAutoPlay');
-        }
-        
-        // clear auto play
-        if (autoPlayIntervalId) {
-            clearTimeout(autoPlayIntervalId);
         }
         
         if (currentStageIndex > 0) {

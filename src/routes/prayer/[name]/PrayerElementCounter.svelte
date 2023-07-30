@@ -22,7 +22,7 @@
     justify-content: flex-start; 
     flex-wrap: wrap; /* Allow elements to wrap to next line */
     width: 100%;
-    margin-bottom:10px;
+    margin-bottom:5px;
   }
 
   .progress_bar {

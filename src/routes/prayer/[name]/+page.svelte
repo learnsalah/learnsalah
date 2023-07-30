@@ -9,20 +9,21 @@
     import ConfirmModal from './ConfirmModal.svelte';
     import BackButton from './BackButton.svelte';
     import ForwardButton from './ForwardButton.svelte';
+	import ExitButton from './ExitButton.svelte';
+	import PlayButton from './PlayButton.svelte';
+	import PauseButton from './PauseButton.svelte';
+	import PlaybackSpeedButton from './PlaybackSpeedButton.svelte';
     
     export let data;
     let prayer = data.prayer.prayer;
-
     
     let autoPlayIntervalId;
     let isAutoPlaying = false; // flag to store the autoplay state
     
     let currentStageIndex = 0;
     
-    let animateExitCross                = false;
     let animatePlayButton               = false;
     let animatePauseButton              = false;
-    let animatePlaybackSpeedButton      = false;
     
     let noSleep;
     let noSleepEnabled = false;
@@ -94,11 +95,6 @@
         
         if (isAutoPlaying){
             
-            // Clear the timer
-            if (autoPlayIntervalId) {
-                clearTimeout(autoPlayIntervalId);
-            }
-            
             // Set isAutoPlaying to false
             isAutoPlaying = false;
             
@@ -115,24 +111,6 @@
         }
         
         
-    };
-
-    const changePlaybackSpeed = () => {
-
-        
-        // animate play button bouncing
-        animatePlaybackSpeedButton = true;
-        autoPlayIntervalId = setTimeout(() => {
-            animatePlaybackSpeedButton = false;
-        }, 300);
-
-        // increase index by 1
-        playbackSpeedSelectedIndex++;
-
-        // modulo this with total length of playbackSpeeds array
-        playbackSpeedSelectedIndex = playbackSpeedSelectedIndex % playbackSpeeds.length;
-
-
     };
 
     
@@ -186,21 +164,6 @@
     
     let showConfirmModal = false;
     
-    function navigateHome() {
-        if (isAutoPlaying) {
-            stopAutoPlay();
-        }
-        
-        // animate exit cross bouncing
-        animateExitCross = true;
-        setTimeout(() => {
-            animateExitCross = false;
-        }, 300);
-        
-        showConfirmModal = true;
-        
-    }
-    
     function onConfirm() {
         showConfirmModal = false;
         goto('/');
@@ -215,7 +178,6 @@
     
     <BackButton 
     {isAutoPlaying} 
-    bind:autoPlayIntervalId={autoPlayIntervalId} 
     bind:currentStageIndex={currentStageIndex} 
     on:stopAutoPlay={stopAutoPlay}
     />
@@ -223,7 +185,6 @@
     <ForwardButton 
     {isAutoPlaying}
     {prayer}
-    bind:autoPlayIntervalId={autoPlayIntervalId} 
     bind:currentStageIndex={currentStageIndex} 
     on:stopAutoPlay={stopAutoPlay}
     />
@@ -233,27 +194,18 @@
     <div class="container-fluid">
         <PrayerElementCounter {prayer} {currentStageIndex} />
         
-        <div style="display:flex; justify-content:space-between; align-items:center;margin-bottom:15px; ">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
             <span style="text-transform:capitalize;">
                 {prayer[currentStageIndex].name}
             </span>
-            
-            <div
-            style="z-index:2;"
-            >
-                <div class="btn"
-                on:click={navigateHome} 
-                on:keyup={navigateHome}
-                >
-                
-                <img 
-                class:zoom-in-out-box={animateExitCross}
-                width="40"
-                height="40"
-                alt="exit"
-                src="/icons/cross.svg">
 
+            <ExitButton 
+            {isAutoPlaying} 
+            bind:showConfirmModal={showConfirmModal}
+            on:stopAutoPlay={stopAutoPlay}
+            />
         </div>
+
     </div>
 </div>
 
@@ -292,55 +244,33 @@
         
 
         {#if isAutoPlaying}
-            <div 
-            class="btn"
-            on:click={stopAutoPlay} 
-            on:keyup={stopAutoPlay}
-            >
 
-            <img 
-            class:zoom-in-out-box={animatePauseButton}
-            width="50"
-            height="50"
-            alt="pause"
-            src="/icons/pause.svg">
+            <PauseButton
+            {isAutoPlaying}
+            bind:animatePauseButton={animatePauseButton}
+            on:stopAutoPlay={stopAutoPlay}
+            />
 
-            </div>
         {:else}
-            <div 
-            class="btn"
-            on:click={startAutoPlay}
-            on:keyup={startAutoPlay}
-            >
-
-            <img 
-            class:zoom-in-out-box={animatePlayButton}
-            width="50"
-            height="50"
-            alt="pause"
-            src="/icons/play.svg">
-            </div>
+        
+            <PlayButton
+            {isAutoPlaying}
+            bind:animatePlayButton={animatePlayButton}
+            on:startAutoPlay={startAutoPlay}
+            />
 
         {/if}
 
-        <div class="btn"
-            on:click={changePlaybackSpeed}
-            on:keyup={changePlaybackSpeed}
-            class:zoom-in-out-box={animatePlaybackSpeedButton}
-            style="position: relative; width: 60px;">
-            <img style="position: absolute; width: 100%; height: 100%;" src="/icons/stopwatch.svg">
-            <span style="position: absolute; display: flex; justify-content: center; align-items: center; width: 100%; height: 110%; font-weight:900;color:#1e272e; font-size:1rem;">
-                {playbackSpeeds[playbackSpeedSelectedIndex].display}
-            </span>
-        </div>
+        <PlaybackSpeedButton
+        bind:autoPlayIntervalId={autoPlayIntervalId}
+        bind:playbackSpeedSelectedIndex={playbackSpeedSelectedIndex}
+        {playbackSpeeds}
+        />
     
 
 
     </div>
 
-    </div>
-
-</div>
 
 <style>
     
@@ -356,7 +286,7 @@
 
     .imageContainer {
         width: 100%;
-        height: 42vmin; 
+        height: 40vmin; 
         display: flex;
         justify-content: center;
         margin-bottom: 15px;
@@ -390,24 +320,22 @@
         font-size: 5vmin; 
     }
 
-    .btn{
+    :global(.btn){
         background-color: white;
         border-radius: 2rem;
-        width: 4rem;
+        padding: 0 0.6rem 0 0.6rem;
         display: flex;
         justify-content: center;
-        /* align-items:end; */
     }
     
-    .btn:hover{
+    :global(.btn:hover){
         cursor: pointer;
     }
     
-    .zoom-in-out-box {
+    :global(.zoom-in-out-box) {
         animation: zoom-in-zoom-out 0.3s ease;
     }
 
-    
     @keyframes zoom-in-zoom-out {
         0% {
             transform: scale(1, 1);
