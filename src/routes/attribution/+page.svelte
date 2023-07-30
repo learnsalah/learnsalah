@@ -22,6 +22,9 @@
                 and <a href="https://www.figma.com/@thinkcly?ref=svgrepo.com" target="_blank">Konstantin Filatov</a>  in CC Attribution License via <a href="https://www.svgrepo.com/" target="_blank">SVG Repo</a>
             </li>
             <li>
+                Vectors and icons by <a href="https://github.com/Richard9394/MingCute?ref=svgrepo.com" target="_blank">Richard9394</a> in Apache License via <a href="https://www.svgrepo.com/" target="_blank">SVG Repo</a>
+            </li>
+            <li>
                 Prayer time calculation using <a href="https://github.com/batoulapps/adhan-js">adhan-js</a>
             </li>
             <li>
