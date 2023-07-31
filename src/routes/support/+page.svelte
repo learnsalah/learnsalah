@@ -45,9 +45,7 @@
         </section>
 
         <div style="display: flex; justify-content:flex-start;margin-top:60px;margin-bottom: 60px;">
-            <a href="https://coindrop.to/learnsalah" target="_blank">
-                <img src="https://coindrop.to/embed-button.png" style="border-radius: 10px; height: 57px !important;width: 229px !important;" alt="Coindrop.to me"/>
-            </a>
+            
         </div>
         
         <section>
@@ -66,7 +64,7 @@
                     <ul>
                         <li>
                             <strong style="color:#d63031;">
-                                $24/mo.
+                                $12/mo.
                             </strong>
                             Akamai Linode 4GB VM
                         </li>
