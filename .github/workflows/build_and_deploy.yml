@@ -16,7 +16,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: 16
+        node-version: 20
 
     - name: Cache Node.js modules
       uses: actions/cache@v3
@@ -44,7 +44,7 @@ jobs:
       with:
         context: .
         push: true
-        tags: ghcr.io/${{ github.repository_owner }}/learnsalah:latest
+        tags: ghcr.io/learnsalah/learnsalah:latest
 
     # - name: Deploy to VPS
     #   uses: appleboy/ssh-action@master
@@ -56,4 +56,4 @@ jobs:
     #       docker pull ghcr.io/${{ github.repository_owner }}/learnsalah:latest
     #       docker stop learnsalah || true
     #       docker rm learnsalah || true
-    #       docker run -d -p 5000:5000 --name learnsalah ghcr.io/${{ github.repository_owner }}/learnsalah:latest
+    #       docker run -d -p 3000:3000 --name learnsalah ghcr.io/${{ github.repository_owner }}/learnsalah:latest
