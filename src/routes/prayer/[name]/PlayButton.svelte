@@ -26,8 +26,8 @@ on:keyup={startAutoPlay}
 
     <img 
     class:zoom-in-out-box={animatePlayButton}
-    width="50"
-    height="50"
+    width="70"
+    height="70"
     alt="pause"
     src="/icons/play.svg">
 

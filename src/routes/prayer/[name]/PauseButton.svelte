@@ -24,8 +24,8 @@ on:keyup={stopAutoPlay}
 
 <img 
 class:zoom-in-out-box={animatePauseButton}
-width="50"
-height="50"
+width="70"
+height="70"
 alt="pause"
 src="/icons/pause.svg">
 

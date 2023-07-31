@@ -40,10 +40,17 @@ on:click={changeFontSize}
 on:keyup={changeFontSize}
 >
 
-<img width="40" height="40" 
-class:zoom-in-out-box={animateFontSizeButton}
-alt="font size"
-src="/icons/font-size.svg"/>
+    <img
+    class:zoom-in-out-box={animateFontSizeButton}
+    alt="font size"
+    src="/icons/font-size.svg"/>
 
 
 </div>
+
+<style>
+    img {
+        width: 45px;
+        height: 45px;
+    }
+</style>

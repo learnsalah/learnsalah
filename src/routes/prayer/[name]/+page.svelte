@@ -30,7 +30,6 @@
     let noSleep;
     let noSleepEnabled = false;
 
-    // let playbackSpeeds = [1, 1.5 , 0.5]
     let playbackSpeeds = [
         {
             display : "1",
@@ -47,6 +46,8 @@
     ]
     let playbackSpeedSelectedIndex = 0;
     
+    let icons = ["play", "pause", "cross", "font-size", "stopwatch"]
+    $: preloadIconUrls = icons.map((icon) => `/icons/${icon}.svg`);
     
     const startAutoPlay = () => {
         // Always clear the interval
@@ -176,6 +177,12 @@
     }
 </script>
 
+<svelte:head>
+    {#each preloadIconUrls as image}
+      <link rel="preload" as="image" href={image} />
+    {/each}
+</svelte:head>
+
 <div>
     
     <BackButton 
@@ -219,7 +226,7 @@
 />
 
 
-<div style="position: fixed; z-index: 2; display:flex; justify-content:flex-start; bottom: 25px; ">
+<div style="position: fixed; z-index: 2; display:flex; justify-content:flex-start; align-items:end; bottom: 25px; ">
     
     {#if isAutoPlaying}
         <PauseButton
@@ -251,7 +258,7 @@
     :global(.btn){
         background-color: white;
         border-radius: 2rem;
-        padding: 0 0.6rem 0 0.6rem;
+        padding: 0 0.3rem 0 0.3rem;
         display: flex;
         justify-content: center;
     }
@@ -265,17 +272,17 @@
     }
 
     @keyframes zoom-in-zoom-out {
-        0% {
-            transform: scale(1, 1);
-        }
-        33% {
-            transform: scale(1.2, 1.2);
-        }
-        66% {
-            transform: scale(0.8, 0.8);
-        }
-        100% {
-            transform: scale(1, 1);
-        }
+            0% {
+                transform: scale(1, 1);
+            }
+            33% {
+                transform: scale(1.2, 1.2);
+            }
+            66% {
+                transform: scale(0.8, 0.8);
+            }
+            100% {
+                transform: scale(1, 1);
+            }
     }
 </style>
