@@ -3,7 +3,7 @@ export default [
         stage: 'taslim', 
         name: 'Taslim',
         count: 1,
-        duration : 4500,
+        duration : 3000,
         text_arabic : 
         `
         السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ
@@ -23,7 +23,7 @@ export default [
         stage: 'taslim', 
         name: 'Taslim',
         count: 1,
-        duration : 4500,
+        duration : 3000,
         text_arabic : 
         `
         السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ

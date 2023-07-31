@@ -3,7 +3,7 @@ export default [
         stage: 'thana', 
         name: 'Dua Thana',
         count: 1,
-        duration : 3000,
+        duration : 2000,
         text_arabic : 
         `
         سُبْحَانَكَ اللَّهُمَّ
@@ -43,7 +43,7 @@ export default [
         stage: 'thana', 
         name: 'Dua Thana',
         count: 1,
-        duration : 2500,
+        duration : 2000,
         text_arabic : 
         `
         وَتَبَارَكَ اسْمُكَ
@@ -63,7 +63,7 @@ export default [
         stage: 'thana', 
         name: 'Dua Thana',
         count: 1,
-        duration : 2500,
+        duration : 2000,
         text_arabic : 
         `
         وَتَعَالَىٰ جَدُّكَ
@@ -83,7 +83,7 @@ export default [
         stage: 'thana', 
         name: 'Dua Thana',
         count: 1,
-        duration : 4500,
+        duration : 2500,
         text_arabic : 
         `
         وَلَا إِلَهَ غَيْرُكَ

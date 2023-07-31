@@ -3,7 +3,7 @@ export default [
         stage: 'alqayyam',
         name: 'Surah Al Fatihah',
         count: 1,
-        duration: 3000,
+        duration: 1500,
         text_arabic: "بِسْمِ ٱللَّهِ",
         text_transliteration: "Bismi Allahi",
         text_eng: "In the Name of Allah",
@@ -14,7 +14,7 @@ export default [
         stage: 'alqayyam',
         name: 'Surah Al Fatihah',
         count: 1,
-        duration: 3000,
+        duration: 1500,
         text_arabic: "ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ",
         text_transliteration: "arrahmani arraheem",
         text_eng: "the Most Compassionate, Most Merciful.",
@@ -25,7 +25,7 @@ export default [
         stage: 'alqayyam',
         name: 'Surah Al Fatihah',
         count: 1,
-        duration: 3000,
+        duration: 1500,
         text_arabic: "ٱلْحَمْدُ لِلَّهِ",
         text_transliteration: "Alhamdu lillahi",
         text_eng: "All praise is for Allah",
@@ -36,7 +36,7 @@ export default [
         stage: 'alqayyam',
         name: 'Surah Al Fatihah',
         count: 1,
-        duration: 3000,
+        duration: 1500,
         text_arabic: "رَبِّ ٱلْعَـٰلَمِينَ",
         text_transliteration: "rabbi al'alameen",
         text_eng: "Lord of all worlds,",
@@ -47,7 +47,7 @@ export default [
         stage: 'alqayyam', 
         name: 'Surah Al Fatihah',
         count: 1,
-        duration : 3000,
+        duration : 1500,
         text_arabic : 
         `
         ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ
@@ -67,7 +67,7 @@ export default [
         stage: 'alqayyam', 
         name: 'Surah Al Fatihah',
         count: 1,
-        duration : 3000,
+        duration : 1500,
         text_arabic : 
         `
         مَـٰلِكِ يَوْمِ ٱلدِّينِ
@@ -87,7 +87,7 @@ export default [
         stage: 'alqayyam', 
         name: 'Surah Al Fatihah',
         count: 1,
-        duration : 3000,
+        duration : 1500,
         text_arabic : 
         `
         إِيَّاكَ نَعْبُدُ
@@ -107,7 +107,7 @@ export default [
         stage: 'alqayyam', 
         name: 'Surah Al Fatihah',
         count: 1,
-        duration : 4000,
+        duration : 2000,
         text_arabic : 
         `
         وَإِيَّاكَ نَسْتَعِينُ
@@ -127,7 +127,7 @@ export default [
         stage: 'alqayyam', 
         name: 'Surah Al Fatihah',
         count: 1,
-        duration : 4500,
+        duration : 3000,
         text_arabic : 
         `
         ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ
@@ -147,7 +147,7 @@ export default [
         stage: 'alqayyam', 
         name: 'Surah Al Fatihah',
         count: 1,
-        duration : 5500,
+        duration : 3500,
         text_arabic : 
         `
         صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ
@@ -167,7 +167,7 @@ export default [
         stage: 'alqayyam', 
         name: 'Surah Al Fatihah',
         count: 1,
-        duration : 4000,
+        duration : 3000,
         text_arabic : 
         `
         عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ
@@ -187,7 +187,7 @@ export default [
         stage: 'alqayyam', 
         name: 'Surah Al Fatihah',
         count: 1,
-        duration : 4000,
+        duration : 3000,
         text_arabic : 
         `
         وَلَا ٱلضَّآلِّينَ 
@@ -207,14 +207,14 @@ export default [
         stage: 'alqayyam', 
         name: 'Surah Al Fatihah',
         count: 1,
-        duration : 2000,
+        duration : 1000,
         text_arabic : 
         `
         امين
         `,
         text_transliteration : 
         `
-        Amin.
+        Amin
         `,
         text_eng : 
         `

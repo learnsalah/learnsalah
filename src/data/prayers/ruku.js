@@ -3,7 +3,7 @@ export default [
         stage: 'ruku', 
         name: 'Ruku',
         count: 3,
-        duration : 2500 + 3*2500 + 2500,
+        duration : 1000 + 3*1000 + 1000,
         text_arabic : 
         `
         سُبْحَانَ رَبِّيَ الْعَظِيمِ

@@ -7,17 +7,17 @@
 
     let timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     let latitude, longitude;
+    let errorMessage = "";
 
     onMount(() => {
         // Check if permissions API is supported
         if (!navigator.permissions) {
-            console.log("Permissions API not supported");
+            errorMessage = "Permissions API not supported";
             return;
         }
 
         navigator.permissions.query({name: 'geolocation'})
             .then((permissionStatus) => {
-                console.log('geolocation permission state is ', permissionStatus.state);
 
                 if (permissionStatus.state === 'granted') {
                     getPrayerTimes();
@@ -41,13 +41,11 @@
                 const date = new Date();  // get current date
                 prayerTimes = new PrayerTimes(coordinates, date, params);
 
-                console.log(prayerTimes);
-
-            }, (error) => {
-                console.error('Error obtaining geolocation', error);
+            }, () => {
+                errorMessage = "Error obtaining geolocation";
             });
         } else {
-            console.error('Geolocation is not available');
+            errorMessage = "Geolocation is not available";
         }
     }
 
@@ -85,6 +83,8 @@
         {timeZone}
 
     </a>
+
+    {errorMessage}
 
 
 {/if}

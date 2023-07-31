@@ -3,7 +3,7 @@ export default [
         stage: 'alqayyam', 
         name: 'Surah Al Falaq',
         count: 1,
-        duration : 5000,
+        duration : 3000,
         text_arabic : 
         `
         قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ
@@ -23,7 +23,7 @@ export default [
         stage: 'alqayyam', 
         name: 'Surah Al Falaq',
         count: 1,
-        duration : 4000,
+        duration : 2200,
         text_arabic : 
         `
         مِن شَرِّ مَا خَلَقَ
@@ -43,7 +43,7 @@ export default [
         stage: 'alqayyam',
         name: 'Surah Al Falaq',
         count: 1,
-        duration: 2500,
+        duration: 1500,
         text_arabic: "وَمِن شَرِّ",
         text_transliteration: "Wa min sharri",
         text_eng: "And from the evil",
@@ -54,7 +54,7 @@ export default [
         stage: 'alqayyam',
         name: 'Surah Al Falaq',
         count: 1,
-        duration: 3000,
+        duration: 1500,
         text_arabic: "غَاسِقٍ إِذَا وَقَبَ",
         text_transliteration: "ghasiqin idha waqab",
         text_eng: "of darkness when it settles",
@@ -65,7 +65,7 @@ export default [
         stage: 'alqayyam',
         name: 'Surah Al Falaq',
         count: 1,
-        duration: 2500,
+        duration: 1500,
         text_arabic: "وَمِن شَرِّ",
         text_transliteration: "Wa min sharri",
         text_eng: "And from the evil",
@@ -76,7 +76,7 @@ export default [
         stage: 'alqayyam',
         name: 'Surah Al Falaq',
         count: 1,
-        duration: 5000,
+        duration: 3500,
         text_arabic: "النَّفَّاثَاتِ فِي الْعُقَدِ",
         text_transliteration: "an-naffathaati fee al-'uqad",
         text_eng: "of the blowers in knots",
@@ -87,7 +87,7 @@ export default [
         stage: 'alqayyam',
         name: 'Surah Al Falaq',
         count: 1,
-        duration: 4000,
+        duration: 3500,
         text_arabic: "وَمِن شَرِّ حَاسِدٍ",
         text_transliteration: "Wa min sharri hasidin",
         text_eng: "And from the evil of an envier",
@@ -98,7 +98,7 @@ export default [
         stage: 'alqayyam',
         name: 'Surah Al Falaq',
         count: 1,
-        duration: 2500,
+        duration: 1500,
         text_arabic: "إِذَا حَسَدَ",
         text_transliteration: "idha hasad",
         text_eng: "when he envies.",
