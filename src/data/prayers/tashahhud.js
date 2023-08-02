@@ -19,6 +19,23 @@ export default [
         img : "/images/sitting2.jpg",
         instruction : ""
     },
+    {
+        stage: 'tashahhud',
+        name: 'Tashahhud',
+        count: 1,
+        duration : 3500,
+        text_arabic : `
+        وَالصَّلَوَاتُ وَالطَّيِّبَاتُ
+        `,
+        text_transliteration : `
+        Was-salawatu wat-tayyibatu
+        `,
+        text_eng : `
+        And the prayers and the pure words
+        `,
+        img : "/images/sitting2.jpg",
+        instruction : ""
+    },
     { 
         stage: 'tashahhud', 
         name: 'Tashahhud',
