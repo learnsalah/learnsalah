@@ -17,7 +17,15 @@ export default [
         O Allah, send prayers upon Muhammad
         `,
         img : "/images/sitting2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/d_1.mp3",
+            duration : 3500
+        },
+        audio_2 : { 
+            path : "/sounds/elmallah/d_1.mp3",
+            duration : 3500
+        }
     },
     { 
         stage: 'durood', 
@@ -37,7 +45,15 @@ export default [
         And upon the family of Muhammad
         `,
         img : "/images/sitting2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/d_2.mp3",
+            duration : 2800
+        },
+        audio_2 : { 
+            path : "/sounds/elmallah/d_2.mp3",
+            duration : 2800
+        }
     },
     { 
         stage: 'durood', 
@@ -57,7 +73,15 @@ export default [
         As You have sent prayers upon Ibrahim
         `,
         img : "/images/sitting2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/d_3.mp3",
+            duration : 3600
+        },
+        audio_2 : { 
+            path : "/sounds/elmallah/d_3.mp3",
+            duration : 3600
+        }
     },
     { 
         stage: 'durood', 
@@ -77,7 +101,15 @@ export default [
         And upon the family of Ibrahim
         `,
         img : "/images/sitting2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/d_4.mp3",
+            duration : 3300
+        },
+        audio_2 : { 
+            path : "/sounds/elmallah/d_4.mp3",
+            duration : 3300
+        }
     },
     { 
         stage: 'durood', 
@@ -97,7 +129,15 @@ export default [
         Truly, You are Praiseworthy and Glorious.
         `,
         img : "/images/sitting2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/d_5.mp3",
+            duration : 3300
+        },
+        audio_2 : { 
+            path : "/sounds/elmallah/d_5.mp3",
+            duration : 3300
+        }
     },
     { 
         stage: 'durood', 
@@ -117,7 +157,15 @@ export default [
         O Allah, bless Muhammad
         `,
         img : "/images/sitting2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/d_6.mp3",
+            duration : 3300
+        },
+        audio_2 : { 
+            path : "/sounds/elmallah/d_6.mp3",
+            duration : 3300
+        }
     },
     { 
         stage: 'durood', 
@@ -137,7 +185,15 @@ export default [
         And upon the family of Muhammad
         `,
         img : "/images/sitting2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/d_7.mp3",
+            duration : 2400
+        },
+        audio_2 : { 
+            path : "/sounds/elmallah/d_7.mp3",
+            duration : 2400
+        }
     },
     { 
         stage: 'durood', 
@@ -157,7 +213,15 @@ export default [
         As You have blessed Ibrahim
         `,
         img : "/images/sitting2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/d_8.mp3",
+            duration : 3400
+        },
+        audio_2 : { 
+            path : "/sounds/elmallah/d_8.mp3",
+            duration : 3400
+        }
     },
     { 
         stage: 'durood', 
@@ -177,7 +241,15 @@ export default [
         And upon the family of Ibrahim
         `,
         img : "/images/sitting2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/d_9.mp3",
+            duration : 3000
+        },
+        audio_2 : { 
+            path : "/sounds/elmallah/d_9.mp3",
+            duration : 3000
+        }
     },
     { 
         stage: 'durood', 
@@ -197,6 +269,14 @@ export default [
         Truly, You are Praiseworthy and Glorious.
         `,
         img : "/images/sitting2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/d_10.mp3",
+            duration : 3000
+        },
+        audio_2 : { 
+            path : "/sounds/elmallah/d_10.mp3",
+            duration : 3000
+        }
     }    
 ];

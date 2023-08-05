@@ -8,6 +8,14 @@ export default [
         text_transliteration: "Allahu Akbar",
         text_eng: "God is most great.",
         img: "/images/standing.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/takbeer_1_tajweed.mp3",
+            duration : 3000
+        },
+        audio_2 : { 
+            path : "/sounds/elmallah/takbeer_1.mp3",
+            duration : 2200
+        }
     }
 ];

@@ -1,7 +1,6 @@
 <script>
     import { onMount, onDestroy } from 'svelte';
     import { goto } from '$app/navigation';
-
     
     import NoSleep from 'nosleep.js'
     
@@ -16,6 +15,7 @@
 	import CoverPage from './CoverPage.svelte';
 	import AudioToggleButton from './AudioToggleButton.svelte';
 	import AutoPlayToggleButton from './AutoPlayToggleButton.svelte';
+	import AudioContainer from './AudioContainer.svelte';
     
     export let data;
     let prayer_name = data.prayer.name;
@@ -38,24 +38,20 @@
 
     let hasActiveAudio = false;
 
-    let playbackSpeeds = [
-        {
-            display : "1",
-            multiplier : 1
-        },
-        {
-            display : "0.5",
-            multiplier : 2
-        },
-        {
-            display : "1.5",
-            multiplier : 2/3
-        }
-    ]
+    let playbackSpeeds = [1, 0.8, 1.5];
     let playbackSpeedSelectedIndex = 0;
+
     
     let icons = ["play", "pause", "cross", "font-size", "stopwatch", "speaker_off", "speaker_on", "settings"]
     $: preloadIconUrls = icons.map((icon) => `/icons/${icon}.svg`);
+
+    let images = [
+        "ruku", "sitting_left", "sitting_right", "sitting",
+        "sitting2", "standing", "standing2", "standing3",
+        "sujood"
+    ];
+    $: preloadImageUrls = images.map((image) => `/images/${image}.jpg`);
+
     
     const startAutoPlay = () => {
 
@@ -65,6 +61,7 @@
         }
         
         if (!isAutoPlaying) {
+
             // animate pause button bouncing
             animatePauseButton = true;
             setTimeout(() => {
@@ -77,9 +74,16 @@
             // enable nosleep
             noSleep.enable();
             noSleepEnabled = true;
+
         }
+
+        let playbackDuration = prayer[currentStageIndex].audio_1.duration;
+        let playbackSpeedMultiplier = 1/playbackSpeeds[playbackSpeedSelectedIndex];
         
+
         if (isAutoPlaying) {
+
+            // set timeout for this stage
             autoPlayIntervalId = setTimeout(() => {
                 
                 if (currentStageIndex < prayer.length - 1) {
@@ -92,8 +96,8 @@
                 
                 // Re-trigger the function after the current stage's duration
                 startAutoPlay();
-                
-            }, playbackSpeeds[playbackSpeedSelectedIndex].multiplier * prayer[currentStageIndex].duration);
+
+            },  playbackSpeedMultiplier * playbackDuration);
         }
     };
     
@@ -186,7 +190,10 @@
 
 <svelte:head>
     {#each preloadIconUrls as image}
-      <link rel="preload" as="image" href={image} />
+        <link rel="preload" as="image" href={image} />
+    {/each}
+    {#each preloadImageUrls as image}
+        <link rel="preload" as="image" href={image} />
     {/each}
 </svelte:head>
 
@@ -240,11 +247,17 @@
     <InstructionContainer
     {prayer}
     {currentStageIndex}
-    {hasActiveAudio}
+    />
+
+    <AudioContainer 
+    {prayer}
+    {currentStageIndex}
+    playbackSpeed={playbackSpeeds[playbackSpeedSelectedIndex]}
+    bind:hasActiveAudio={hasActiveAudio}
     />
 
 
-    <div style="position: fixed; z-index: 2; display:flex; justify-content:flex-start; align-items:end; bottom: 3vh; width:90vw; margin:0 auto; left:0;right:0; border-radius: 100px;  background-color:red; ">
+    <div style="position: fixed; z-index: 2; display:flex; justify-content:flex-start; align-items:end; bottom: 3vh; width:90vw; margin:0 auto; left:0;right:0; border-radius: 100px;  background-color:white; ">
         
         <AutoPlayToggleButton
         {isAutoPlaying}

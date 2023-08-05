@@ -3,7 +3,7 @@ export default [
         stage: 'tashahhud', 
         name: 'Tashahhud',
         count: 1,
-        duration : 2500,
+        duration : 2800,
         text_arabic : 
         `
         التَّحِيَّاتُ لِلّهِ
@@ -17,13 +17,21 @@ export default [
         All compliments are due to Allah
         `,
         img : "/images/sitting2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/t_1.mp3",
+            duration : 2800
+        },
+        audio_2 : { 
+            path : "/sounds/elmallah/t_1.mp3",
+            duration : 2800
+        }
     },
     {
         stage: 'tashahhud',
         name: 'Tashahhud',
         count: 1,
-        duration : 3500,
+        duration : 3200,
         text_arabic : `
         وَالصَّلَوَاتُ وَالطَّيِّبَاتُ
         `,
@@ -34,13 +42,21 @@ export default [
         And the prayers and the pure words
         `,
         img : "/images/sitting2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/t_2.mp3",
+            duration : 3200
+        },
+        audio_2 : { 
+            path : "/sounds/elmallah/t_2.mp3",
+            duration : 3200
+        }
     },
     { 
         stage: 'tashahhud', 
         name: 'Tashahhud',
         count: 1,
-        duration : 3500,
+        duration : 3800,
         text_arabic : 
         `
         السَّلاَمُ عَلَيْكَ أَيُّهَا النَّبِيُّ
@@ -54,13 +70,21 @@ export default [
         Peace be upon you, O Prophet
         `,
         img: "/images/sitting2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/t_3.mp3",
+            duration : 3800
+        },
+        audio_2 : { 
+            path : "/sounds/elmallah/t_3.mp3",
+            duration : 3800
+        }
     },
     { 
         stage: 'tashahhud', 
         name: 'Tashahhud',
         count: 1,
-        duration : 3000,
+        duration : 3700,
         text_arabic : 
         `
         وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ
@@ -74,13 +98,21 @@ export default [
         and Allah's mercy and blessings
         `,
         img: "/images/sitting2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/t_4.mp3",
+            duration : 3700
+        },
+        audio_2 : { 
+            path : "/sounds/elmallah/t_4.mp3",
+            duration : 3700
+        }
     },
     { 
         stage: 'tashahhud', 
         name: 'Tashahhud',
         count: 1,
-        duration : 1500,
+        duration : 2500,
         text_arabic : 
         `
         السَّلاَمُ عَلَيْنَا
@@ -94,13 +126,21 @@ export default [
         Peace be upon us
         `,
         img: "/images/sitting2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/t_5.mp3",
+            duration : 2500
+        },
+        audio_2 : { 
+            path : "/sounds/elmallah/t_5.mp3",
+            duration : 2500
+        }
     },
     { 
         stage: 'tashahhud', 
         name: 'Tashahhud',
         count: 1,
-        duration : 3000,
+        duration : 3500,
         text_arabic : 
         `
         وَعَلَى عِبَادِ اللهِ الصَّالِحِينَ
@@ -114,13 +154,21 @@ export default [
         and upon all of Allah's righteous servants
         `,
         img: "/images/sitting2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/t_6.mp3",
+            duration : 4000
+        },
+        audio_2 : { 
+            path : "/sounds/elmallah/t_6.mp3",
+            duration : 4000
+        }
     },
     { 
         stage: 'tashahhud', 
         name: 'Tashahhud',
         count: 1,
-        duration : 2000,
+        duration : 4000,
         text_arabic : 
         `
         أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ اللهُ
@@ -134,13 +182,21 @@ export default [
         I bear witness that there is no deity except Allah
         `,
         img : "/images/sitting2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/t_7.mp3",
+            duration : 4000
+        },
+        audio_2 : { 
+            path : "/sounds/elmallah/t_7.mp3",
+            duration : 4000
+        }
     },
     { 
         stage: 'tashahhud', 
         name: 'Tashahhud',
         count: 1,
-        duration : 2000,
+        duration : 3000,
         text_arabic : 
         `
         وَأَشْهَدُ أَنَّ مُحَمَّدًا
@@ -154,13 +210,21 @@ export default [
         And I bear witness that Muhammad
         `,
         img: "/images/sitting2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/t_8.mp3",
+            duration : 3000
+        },
+        audio_2 : { 
+            path : "/sounds/elmallah/t_8.mp3",
+            duration : 3000
+        }
     },
     { 
         stage: 'tashahhud', 
         name: 'Tashahhud',
         count: 1,
-        duration : 1500,
+        duration : 2500,
         text_arabic : 
         `
         عَبْدُهُ وَرَسُولُهُ
@@ -174,6 +238,14 @@ export default [
         is His servant and messenger
         `,
         img: "/images/sitting2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/t_9.mp3",
+            duration : 3100
+        },
+        audio_2 : { 
+            path : "/sounds/elmallah/t_9.mp3",
+            duration : 3100
+        }
     }
 ];

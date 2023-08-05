@@ -1,9 +1,28 @@
 export default [
+    {
+        stage: 'ruku',
+        name: 'Ruku',
+        count: 1,
+        duration : 1000 + 2000,
+        text_arabic : "الله أكبر",
+        text_transliteration : "Allahu Akbar",
+        text_eng : "God is most great.",
+        img : "/images/standing.jpg",
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/takbeer_1_tajweed.mp3",
+            duration : 1000 + 3000
+        },
+        audio_2 : { 
+            path : "/sounds/elmallah/takbeer_1.mp3",
+            duration : 1000 + 2200
+        }
+    },
     { 
         stage: 'ruku', 
         name: 'Ruku',
-        count: 3,
-        duration : 1000 + 3*1000 + 1000,
+        count: 1,
+        duration : 1000 + 3200,
         text_arabic : 
         `
         سُبْحَانَ رَبِّيَ الْعَظِيمِ
@@ -17,6 +36,70 @@ export default [
         Glory be to my lord the Supreme.
         `,
         img : "/images/ruku.jpg",
-        instruction : ""
+        instruction : "Bow at waist, place hands on knees",
+        audio_1 : {
+            path : "/sounds/elmallah/ruku_1.mp3",
+            duration : 1000 + 3200
+        },
+        audio_2 : {
+            path : "/sounds/elmallah/ruku_1.mp3",
+            duration : 1000 + 3200
+        }
+    },
+    { 
+        stage: 'ruku', 
+        name: 'Ruku',
+        count: 1,
+        duration : 3500,
+        text_arabic : 
+        `
+        سُبْحَانَ رَبِّيَ الْعَظِيمِ
+        `,
+        text_transliteration : 
+        `
+        Subhaana rabbiyal 'atheem
+        `,
+        text_eng : 
+        `
+        Glory be to my lord the Supreme.
+        `,
+        img : "/images/ruku.jpg",
+        instruction : "Bow at waist, place hands on knees",
+        audio_1 : {
+            path : "/sounds/elmallah/ruku_1.mp3",
+            duration : 300 + 3200
+        },
+        audio_2 : {
+            path : "/sounds/elmallah/ruku_1.mp3",
+            duration : 300 + 3200
+        }
+    },
+    { 
+        stage: 'ruku', 
+        name: 'Ruku',
+        count: 1,
+        duration : 3200 + 2000,
+        text_arabic : 
+        `
+        سُبْحَانَ رَبِّيَ الْعَظِيمِ
+        `,
+        text_transliteration : 
+        `
+        Subhaana rabbiyal 'atheem
+        `,
+        text_eng : 
+        `
+        Glory be to my lord the Supreme.
+        `,
+        img : "/images/ruku.jpg",
+        instruction : "Bow at waist, place hands on knees",
+        audio_1 : {
+            path : "/sounds/elmallah/ruku_1.mp3",
+            duration : 3200 + 2000
+        },
+        audio_2 : {
+            path : "/sounds/elmallah/ruku_1.mp3",
+            duration : 3200 + 2000
+        }
     }
 ];

@@ -12,6 +12,25 @@
 
 <main>
     <div class="container">
+
+        <h3>
+            Contribution
+        </h3>
+
+        <p>
+            With heartfelt appreciation and sincere gratitude, we extend our thanks for your incredible contribution to Learn Salah:
+        </p>
+
+        <ul>
+            <li>
+                <strong>Abubakr Elmallah</strong> - for generously providing the remarkable audio tracks for the prayers
+            </li>
+        </ul>
+        
+        <p>
+            JazakAllah Khair.
+        </p>
+
         <h3>
             Attribution
         </h3>

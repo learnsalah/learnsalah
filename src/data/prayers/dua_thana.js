@@ -3,7 +3,7 @@ export default [
         stage: 'thana', 
         name: 'Dua Thana',
         count: 1,
-        duration : 2000,
+        duration : 2700,
         text_arabic : 
         `
         سُبْحَانَكَ اللَّهُمَّ
@@ -17,7 +17,15 @@ export default [
         Glory be to You, O Allah
         `,
         img : "/images/standing2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/dt_1.mp3",
+            duration : 3000
+        },
+        audio_2 : {
+            path : "/sounds/elmallah/dt_1.mp3",
+            duration : 2700
+        }
     },
     { 
         stage: 'thana', 
@@ -37,13 +45,21 @@ export default [
         And all praises are due unto You
         `,
         img : "/images/standing2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/dt_2.mp3",
+            duration : 2500
+        },
+        audio_2 : {
+            path : "/sounds/elmallah/dt_2.mp3",
+            duration : 2000
+        }
     },
     { 
         stage: 'thana', 
         name: 'Dua Thana',
         count: 1,
-        duration : 2000,
+        duration : 2700,
         text_arabic : 
         `
         وَتَبَارَكَ اسْمُكَ
@@ -57,13 +73,21 @@ export default [
         And blessed is Your name
         `,
         img : "/images/standing2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/dt_3.mp3",
+            duration : 3300
+        },
+        audio_2 : {
+            path : "/sounds/elmallah/dt_3.mp3",
+            duration : 2700
+        }
     },
     { 
         stage: 'thana', 
         name: 'Dua Thana',
         count: 1,
-        duration : 2000,
+        duration : 2600,
         text_arabic : 
         `
         وَتَعَالَىٰ جَدُّكَ
@@ -77,13 +101,21 @@ export default [
         And high is Your majesty
         `,
         img : "/images/standing2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/dt_4.mp3",
+            duration : 3000
+        },
+        audio_2 : {
+            path : "/sounds/elmallah/dt_4.mp3",
+            duration : 2600
+        }
     },
     { 
         stage: 'thana', 
         name: 'Dua Thana',
         count: 1,
-        duration : 2500,
+        duration : 2900,
         text_arabic : 
         `
         وَلَا إِلَهَ غَيْرُكَ
@@ -97,6 +129,14 @@ export default [
         and none is worthy of worship but You
         `,
         img : "/images/standing2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/dt_5.mp3",
+            duration : 3000
+        },
+        audio_2 : {
+            path : "/sounds/elmallah/dt_5.mp3",
+            duration : 2900
+        }
     }
 ];

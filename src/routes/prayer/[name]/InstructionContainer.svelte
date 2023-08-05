@@ -1,28 +1,13 @@
 <script lang="ts">
 
+
     import { fontSizeTransliterationText } from '../../../store.js';
 
     export let prayer;
     export let currentStageIndex : number;
-    export let hasActiveAudio : boolean;
-
-    let images = [
-        "ruku", "sitting_left", "sitting_right", "sitting",
-        "sitting2", "standing", "standing2", "standing3",
-        "sujood"
-    ];
-    $: preloadImageUrls = images.map((image) => `/images/${image}.jpg`);
 
     
 </script>
-
-
-<svelte:head>
-    {#each preloadImageUrls as image}
-      <link rel="preload" as="image" href={image} />
-    {/each}
-</svelte:head>
-
 
 <div class="instruction_container">
     <div class="imageContainer">
@@ -41,27 +26,12 @@
     <div class="prayerTransliterationText"
     style="font-size: {$fontSizeTransliterationText}vmin;"
     >
-        {#if prayer[currentStageIndex].count > 1}
-            <span style="color:#218c74;">
-                {prayer[currentStageIndex].count}&times;
-            </span>
-        {/if}
-         
         {prayer[currentStageIndex].text_transliteration}
-        
     </div>
     
     <div class="prayerEnglishText">
         {prayer[currentStageIndex].text_eng}
     </div>
-
-    {#if hasActiveAudio}
-
-        <audio autoplay>
-            <source src="/sounds/takbeer_1_tajweed.mp3" type="audio/mpeg">
-        </audio>
-
-    {/if}
 
 </div>
 

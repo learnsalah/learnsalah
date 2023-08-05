@@ -3,7 +3,7 @@ export default [
         stage: 'qayyam', 
         name: 'Qayyam',
         count: 1,
-        duration : 5000,
+        duration : 4000,
         text_arabic : 
         `
         سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ
@@ -17,7 +17,15 @@ export default [
         Allah hears whoever praises Him.
         `,
         img : "/images/standing.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/q_1.mp3",
+            duration : 4200
+        },
+        audio_2 : {
+            path : "/sounds/elmallah/q_1.mp3",
+            duration : 4200
+        }
     },
     { 
         stage: 'qayyam', 
@@ -37,6 +45,14 @@ export default [
         Our Lord, and all the praises are for You.
         `,
         img : "/images/standing3.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/q_2.mp3",
+            duration : 3200
+        },
+        audio_2 : {
+            path : "/sounds/elmallah/q_2.mp3",
+            duration : 3200
+        }
     }
 ];

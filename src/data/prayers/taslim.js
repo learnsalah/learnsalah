@@ -3,7 +3,7 @@ export default [
         stage: 'taslim', 
         name: 'Taslim',
         count: 1,
-        duration : 3000,
+        duration : 4200,
         text_arabic : 
         `
         السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ
@@ -17,13 +17,21 @@ export default [
         May Allah's peace and mercy be upon you
         `,
         img : "/images/sitting_right.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/taslim_1.mp3",
+            duration : 4200
+        },
+        audio_2 : { 
+            path : "/sounds/elmallah/taslim_1.mp3",
+            duration : 4200
+        }
     },
     { 
         stage: 'taslim', 
         name: 'Taslim',
         count: 1,
-        duration : 3000,
+        duration : 4200,
         text_arabic : 
         `
         السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ
@@ -37,6 +45,14 @@ export default [
         May Allah's peace and mercy be upon you
         `,
         img : "/images/sitting_left.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/taslim_1.mp3",
+            duration : 4200
+        },
+        audio_2 : { 
+            path : "/sounds/elmallah/taslim_1.mp3",
+            duration : 4200
+        }
     }
 ];

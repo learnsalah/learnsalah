@@ -3,7 +3,7 @@ export default [
         stage: 'alqayyam', 
         name: 'Surah Al Ikhlas',
         count: 1,
-        duration : 2000,
+        duration : 2500,
         text_arabic : 
         `
         قُلْ هُوَ ٱللَّهُ أَحَدٌ
@@ -17,13 +17,21 @@ export default [
         Say: "He is Allah — One and Indivisible
         `,
         img: "/images/standing2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/ai_1_tajweed.mp3",
+            duration : 3500
+        },
+        audio_2 : {
+            path : "/sounds/elmallah/ai_1.mp3",
+            duration : 2600
+        }
     },
     { 
         stage: 'alqayyam', 
         name: 'Surah Al Ikhlas',
         count: 1,
-        duration : 1500,
+        duration : 2000,
         text_arabic : 
         `
         ٱللَّهُ ٱلصَّمَدُ
@@ -37,13 +45,21 @@ export default [
         Allah — the Sustainer needed by all.
         `,
         img: "/images/standing2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/ai_2_tajweed.mp3",
+            duration : 3400
+        },
+        audio_2 : {
+            path : "/sounds/elmallah/ai_2.mp3",
+            duration : 2400
+        }
     },
     { 
         stage: 'alqayyam', 
         name: 'Surah Al Ikhlas',
         count: 1,
-        duration : 2000,
+        duration : 2500,
         text_arabic : 
         `
         لَمْ يَلِدْ وَلَمْ يُولَدْ
@@ -57,7 +73,15 @@ export default [
         He has never had offspring, nor was He born.
         `,
         img: "/images/standing2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/ai_3_tajweed.mp3",
+            duration : 3800
+        },
+        audio_2 : {
+            path : "/sounds/elmallah/ai_3.mp3",
+            duration : 3100
+        }
     },
     { 
         stage: 'alqayyam', 
@@ -76,6 +100,14 @@ export default [
         And there is none comparable to Him."
         `,
         img: "/images/standing2.jpg",
-        instruction : ""
+        instruction : "",
+        audio_1 : {
+            path : "/sounds/elmallah/ai_4_tajweed.mp3",
+            duration : 4500
+        },
+        audio_2 : {
+            path : "/sounds/elmallah/ai_4.mp3",
+            duration : 4200
+        }
     }
 ];

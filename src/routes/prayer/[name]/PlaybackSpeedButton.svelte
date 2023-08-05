@@ -20,7 +20,7 @@
         playbackSpeedSelectedIndex = playbackSpeedSelectedIndex % playbackSpeeds.length;
 
 
-        };
+    };
 
 </script>
 
@@ -35,7 +35,7 @@
     src="/icons/stopwatch.svg"
     >
     <span class="playbackSpeedNumber">
-        {playbackSpeeds[playbackSpeedSelectedIndex].display}
+        {playbackSpeeds[playbackSpeedSelectedIndex]}
     </span>
 
 </div>
