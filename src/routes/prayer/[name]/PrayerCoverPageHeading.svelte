@@ -1,17 +1,17 @@
 <script lang="ts">
-    import {prayers} from "./prayer_intro";
+    import {prayers} from "../../../data/prayers/prayer_intro";
 
-    export let prayer_type;
+    export let prayer_name;
 
     let prayer;
 
     if (!prayers) {
         // console.error("Prayers data is not available.");
-    } else if (!prayer_type || !prayers.hasOwnProperty(prayer_type)) {
-        // console.error(`Invalid prayer type: ${prayer_type}`);
+    } else if (!prayer_name || !prayers.hasOwnProperty(prayer_name)) {
+        // console.error(`Invalid prayer type: ${prayer_name}`);
     } else {
         try {
-            prayer = prayers[prayer_type];
+            prayer = prayers[prayer_name];
         } catch (error) {
             // console.error("An error occurred while fetching the prayer data:", error);
         }

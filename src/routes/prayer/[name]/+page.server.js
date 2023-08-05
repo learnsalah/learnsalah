@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import {prayers} from "../../../data/prayers/prayers"
+import { prayers } from "../../../data/prayers/prayers"
 
 
 export function load({params}) {

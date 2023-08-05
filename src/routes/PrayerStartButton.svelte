@@ -3,7 +3,7 @@
 </script>
 
 <a
-href="/prayer_start/{prayer}" 
+href="/prayer/{prayer}" 
 class="button"
 >   
     Pray {prayer}

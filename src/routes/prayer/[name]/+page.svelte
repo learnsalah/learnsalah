@@ -15,8 +15,10 @@
 	import PlaybackSpeedButton from './PlaybackSpeedButton.svelte';
 	import InstructionContainer from './InstructionContainer.svelte';
 	import FontSizeButton from './FontSizeButton.svelte';
+	import CoverPage from './CoverPage.svelte';
     
     export let data;
+    let prayer_name = data.prayer.name;
     let prayer = data.prayer.prayer;
     
     let autoPlayIntervalId;
@@ -29,6 +31,8 @@
     
     let noSleep;
     let noSleepEnabled = false;
+
+    let isCoverPageActive = true;
 
     let playbackSpeeds = [
         {
@@ -183,75 +187,86 @@
     {/each}
 </svelte:head>
 
+{#if isCoverPageActive}
 <div>
-    
-    <BackButton 
-    {isAutoPlaying} 
-    bind:currentStageIndex={currentStageIndex} 
-    on:stopAutoPlay={stopAutoPlay}
+    <CoverPage 
+    {prayer_name}
+    bind:isCoverPageActive={isCoverPageActive}
     />
-    
-    <ForwardButton 
-    {isAutoPlaying}
-    {prayer}
-    bind:currentStageIndex={currentStageIndex} 
-    on:stopAutoPlay={stopAutoPlay}
-    />
-    
-    <ConfirmModal show={showConfirmModal} {onConfirm} {onCancel} />
-    
-    <div class="container-fluid">
-        <PrayerElementCounter {prayer} {currentStageIndex} />
+</div>
+{:else}
+<div>
+    <div>
         
-        <div style="display:flex; justify-content:space-between; align-items:center;">
-            <span style="text-transform:capitalize;">
-                {prayer[currentStageIndex].name}
-            </span>
+        <BackButton 
+        {isAutoPlaying} 
+        bind:currentStageIndex={currentStageIndex} 
+        on:stopAutoPlay={stopAutoPlay}
+        />
+        
+        <ForwardButton 
+        {isAutoPlaying}
+        {prayer}
+        bind:currentStageIndex={currentStageIndex} 
+        on:stopAutoPlay={stopAutoPlay}
+        />
+        
+        <ConfirmModal show={showConfirmModal} {onConfirm} {onCancel} />
+        
+        <div class="container-fluid">
+            <PrayerElementCounter {prayer} {currentStageIndex} />
+            
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="text-transform:capitalize;">
+                    {prayer[currentStageIndex].name}
+                </span>
 
-            <ExitButton 
-            {isAutoPlaying} 
-            bind:showConfirmModal={showConfirmModal}
+                <ExitButton 
+                {isAutoPlaying} 
+                bind:showConfirmModal={showConfirmModal}
+                on:stopAutoPlay={stopAutoPlay}
+                />
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <InstructionContainer
+    {prayer}
+    {currentStageIndex}
+    />
+
+
+    <div style="position: fixed; z-index: 2; display:flex; justify-content:flex-start; align-items:end; bottom: 25px; ">
+        
+        {#if isAutoPlaying}
+            <PauseButton
+            {isAutoPlaying}
+            bind:animatePauseButton={animatePauseButton}
             on:stopAutoPlay={stopAutoPlay}
             />
-        </div>
+        {:else}
+        
+            <PlayButton
+            {isAutoPlaying}
+            bind:animatePlayButton={animatePlayButton}
+            on:startAutoPlay={startAutoPlay}
+            />
+        {/if}
+        <PlaybackSpeedButton
+        bind:autoPlayIntervalId={autoPlayIntervalId}
+        bind:playbackSpeedSelectedIndex={playbackSpeedSelectedIndex}
+        {playbackSpeeds}
+        />
+
+        <FontSizeButton />
 
     </div>
 </div>
 
-
-
-<InstructionContainer
-{prayer}
-{currentStageIndex}
-/>
-
-
-<div style="position: fixed; z-index: 2; display:flex; justify-content:flex-start; align-items:end; bottom: 25px; ">
-    
-    {#if isAutoPlaying}
-        <PauseButton
-        {isAutoPlaying}
-        bind:animatePauseButton={animatePauseButton}
-        on:stopAutoPlay={stopAutoPlay}
-        />
-    {:else}
-    
-        <PlayButton
-        {isAutoPlaying}
-        bind:animatePlayButton={animatePlayButton}
-        on:startAutoPlay={startAutoPlay}
-        />
-    {/if}
-    <PlaybackSpeedButton
-    bind:autoPlayIntervalId={autoPlayIntervalId}
-    bind:playbackSpeedSelectedIndex={playbackSpeedSelectedIndex}
-    {playbackSpeeds}
-    />
-
-    <FontSizeButton />
-
-</div>
-
+{/if}
 
 <style>
 

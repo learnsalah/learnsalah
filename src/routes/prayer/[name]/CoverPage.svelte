@@ -1,9 +1,10 @@
-<script>
+<script lang="ts">
     import Header from '../../Header.svelte';
-	import PrayerHeader from './PrayerHeader.svelte';
+	import PrayerCoverPageHeading from './PrayerCoverPageHeading.svelte';
 	import PrayerStartButton from './PrayerStartButton.svelte';
 
-    export let data;
+    export let prayer_name : string;
+    export let isCoverPageActive : boolean;
 
 </script>
 
@@ -12,7 +13,7 @@
 <main>
    <div class="container">
 
-        <PrayerHeader prayer_type={data.prayer.name}/>
+        <PrayerCoverPageHeading prayer_name={prayer_name}/>
         
         <div>
             
@@ -45,7 +46,10 @@
                 <a href="/">
                     back
                 </a>
-                <PrayerStartButton prayer={data.prayer.name} />
+                <PrayerStartButton 
+                prayer_name={prayer_name} 
+                bind:isCoverPageActive={isCoverPageActive}
+                />
             </div>
         </div>
 
@@ -53,5 +57,3 @@
 
    </div>
 </main>
-
-
