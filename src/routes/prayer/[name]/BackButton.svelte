@@ -28,6 +28,9 @@
 <style>
 
     div{
+        background-color: aqua;
+        opacity: 50%;
+        
         width:50%;
         height: 100%;
         position: absolute;

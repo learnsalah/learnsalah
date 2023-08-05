@@ -10,19 +10,21 @@
     import BackButton from './BackButton.svelte';
     import ForwardButton from './ForwardButton.svelte';
 	import ExitButton from './ExitButton.svelte';
-	import PlayButton from './PlayButton.svelte';
-	import PauseButton from './PauseButton.svelte';
 	import PlaybackSpeedButton from './PlaybackSpeedButton.svelte';
 	import InstructionContainer from './InstructionContainer.svelte';
 	import FontSizeButton from './FontSizeButton.svelte';
 	import CoverPage from './CoverPage.svelte';
+	import AudioToggleButton from './AudioToggleButton.svelte';
+	import AutoPlayToggleButton from './AutoPlayToggleButton.svelte';
     
     export let data;
     let prayer_name = data.prayer.name;
     let prayer = data.prayer.prayer;
     
     let autoPlayIntervalId;
-    let isAutoPlaying = false; // flag to store the autoplay state
+
+    // flag to store the autoplay state
+    let isAutoPlaying = false; 
     
     let currentStageIndex = 0;
     
@@ -33,6 +35,8 @@
     let noSleepEnabled = false;
 
     let isCoverPageActive = true;
+
+    let hasActiveAudio = false;
 
     let playbackSpeeds = [
         {
@@ -50,10 +54,11 @@
     ]
     let playbackSpeedSelectedIndex = 0;
     
-    let icons = ["play", "pause", "cross", "font-size", "stopwatch"]
+    let icons = ["play", "pause", "cross", "font-size", "stopwatch", "speaker_off", "speaker_on", "settings"]
     $: preloadIconUrls = icons.map((icon) => `/icons/${icon}.svg`);
     
     const startAutoPlay = () => {
+
         // Always clear the interval
         if (autoPlayIntervalId) {
             clearTimeout(autoPlayIntervalId);
@@ -116,8 +121,6 @@
             }, 300);
             
         }
-        
-        
     };
 
     
@@ -188,13 +191,14 @@
 </svelte:head>
 
 {#if isCoverPageActive}
-<div>
-    <CoverPage 
-    {prayer_name}
-    bind:isCoverPageActive={isCoverPageActive}
-    />
-</div>
+    <div>
+        <CoverPage 
+        {prayer_name}
+        bind:isCoverPageActive={isCoverPageActive}
+        />
+    </div>
 {:else}
+
 <div>
     <div>
         
@@ -236,25 +240,24 @@
     <InstructionContainer
     {prayer}
     {currentStageIndex}
+    {hasActiveAudio}
     />
 
 
-    <div style="position: fixed; z-index: 2; display:flex; justify-content:flex-start; align-items:end; bottom: 25px; ">
+    <div style="position: fixed; z-index: 2; display:flex; justify-content:flex-start; align-items:end; bottom: 3vh; width:90vw; margin:0 auto; left:0;right:0; border-radius: 100px;  background-color:red; ">
         
-        {#if isAutoPlaying}
-            <PauseButton
-            {isAutoPlaying}
-            bind:animatePauseButton={animatePauseButton}
-            on:stopAutoPlay={stopAutoPlay}
-            />
-        {:else}
-        
-            <PlayButton
-            {isAutoPlaying}
-            bind:animatePlayButton={animatePlayButton}
-            on:startAutoPlay={startAutoPlay}
-            />
-        {/if}
+        <AutoPlayToggleButton
+        {isAutoPlaying}
+        bind:animatePlayButton={animatePlayButton}
+        bind:animatePauseButton={animatePauseButton}
+        on:startAutoPlay={startAutoPlay}
+        on:stopAutoPlay={stopAutoPlay}
+        />
+
+        <AudioToggleButton 
+        bind:hasActiveAudio={hasActiveAudio}
+        />
+
         <PlaybackSpeedButton
         bind:autoPlayIntervalId={autoPlayIntervalId}
         bind:playbackSpeedSelectedIndex={playbackSpeedSelectedIndex}
@@ -262,6 +265,8 @@
         />
 
         <FontSizeButton />
+
+        <img src="/icons/settings.svg" width="50">
 
     </div>
 </div>

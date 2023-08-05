@@ -1,9 +1,10 @@
-<script>
+<script lang="ts">
 
     import { fontSizeTransliterationText } from '../../../store.js';
 
     export let prayer;
-    export let currentStageIndex;
+    export let currentStageIndex : number;
+    export let hasActiveAudio : boolean;
 
     let images = [
         "ruku", "sitting_left", "sitting_right", "sitting",
@@ -53,6 +54,15 @@
     <div class="prayerEnglishText">
         {prayer[currentStageIndex].text_eng}
     </div>
+
+    {#if hasActiveAudio}
+
+        <audio autoplay>
+            <source src="/sounds/takbeer_1_tajweed.mp3" type="audio/mpeg">
+        </audio>
+
+    {/if}
+
 </div>
 
 <style>
