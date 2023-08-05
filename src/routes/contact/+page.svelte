@@ -25,14 +25,13 @@
             </p>
 
             <p>
-                Should you encounter any problems, please don't 
-                hesitate to open an issue here:
+                Should you wish to contact the steward of this particular instance of Learn Salah, please connect with us via:
             </p>
 
             <a 
-            href="https://github.com/learnsalah/learnsalah/issues"
+            href="https://twitter.com/LearnSalah/"
             target="_blank">
-                https://github.com/learnsalah/learnsalah/issues
+                https://twitter.com/LearnSalah/
             </a>
         </section>
 
