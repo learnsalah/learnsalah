@@ -4,32 +4,39 @@
 
 ## Table of Contents
 
-- What is "Learn Salah"?
-- Running "Learn Salah"
+- What is Learn Salah?
+- Running Learn Salah
 - Contributing 
 - Directory Structure
 - Licensing
 - Host your own
 - Current Instances
 
-## What is "Learn Salah"
+## What is Learn Salah
 
 "Learn Salah" is an open-source, non-profit website crafted using SvelteKit, aimed at imparting knowledge on the Islamic act of devotion - Salah.
 
 Our platform underscores the significance of a clean, accessible user interface that ensures quick load times. We uphold our commitment to maintaining a lean and efficient code base, delivering an optimal user experience.
 
-"Learn Salah" is a community project, it does not belong to anyone and is free to use for everyone.
+Learn Salah is a community project, it does not belong to anyone and is free to use for everyone.
 
 ## Running "Learn Salah"
 
 ### Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+First, clone this repo to your local machine:
+```bash
+git clone git@github.com:learnsalah/learnsalah.git && cd learnsalah
+```
+
+Next, install dependencies:
 
 ```bash
-npm run dev
+npm install
+```
 
-# or start the server on all interfaces
+Aftwards, run the application:
+```bash
 npm run dev -- --host
 ```
 
@@ -45,7 +52,15 @@ You can preview the production build with `npm run preview`.
 
 ## Contributing
 
+```bash
+#todo : Write contribution guide
+```
+
 ## Directory Structure
+
+```bash
+#todo : Outline directory structure
+```
 
 ## Licensing
 
@@ -55,6 +70,14 @@ Any user of this software shall indemnify and hold harmless "Learn Salah"'s deve
 
 ## Host your own
 
+```bash
+#todo : Links to guides to set-up own server
+```
+
 ## Current Instances
+
+- [www.learnsalah.com](https://learnsalah.com)
+- [www.learnsalah.org](https://learnsalah.org) (points to [learnsalah.com](https://learnsalah.com))
+
 
 

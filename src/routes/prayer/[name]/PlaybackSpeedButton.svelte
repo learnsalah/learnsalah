@@ -47,12 +47,12 @@
         align-items: center; 
 
         position: absolute;
-        top: 57%;
-        left: 52%;
+        top: 55%;
+        left: 51%;
         transform: translate(-55%, -51%);
 
         font-weight: 900;
         color: #1e272e;
-        font-size: 0.7rem;
+        font-size: 0.75rem;
     }
 </style>
