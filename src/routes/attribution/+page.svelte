@@ -14,7 +14,7 @@
     <div class="container">
 
         <h3>
-            Contribution
+            Exceptional Contributions
         </h3>
 
         <p>

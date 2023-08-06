@@ -1,8 +1,9 @@
 <script>
     import { onMount, onDestroy } from 'svelte';
-    import { goto } from '$app/navigation';
     
     import NoSleep from 'nosleep.js'
+
+    import { audioRefStore } from '../../../store.js'; 
     
     import PrayerElementCounter from "./PrayerElementCounter.svelte"
     import ConfirmModal from './ConfirmModal.svelte';
@@ -38,8 +39,16 @@
 
     let hasActiveAudio = false;
 
-    let playbackSpeeds = [1, 0.8, 1.5];
+    let playbackSpeeds = [1, 0.7, 1.5];
     let playbackSpeedSelectedIndex = 0;
+
+    let showConfirmModal = false;
+
+    let audioRef;
+
+    audioRefStore.subscribe(value => {
+        audioRef = value;
+    });
 
     
     let icons = ["play", "pause", "cross", "font-size", "stopwatch", "speaker_off", "speaker_on", "settings"]
@@ -74,6 +83,11 @@
             // enable nosleep
             noSleep.enable();
             noSleepEnabled = true;
+
+            // play current audio track when play button is hit
+            if (hasActiveAudio && audioRef) {
+                audioRef.play();
+            }
 
         }
 
@@ -123,14 +137,20 @@
             autoPlayIntervalId = setTimeout(() => {
                 animatePlayButton = false;
             }, 300);
+
+            // stop current audio track when pause button is hit
+            if (hasActiveAudio && audioRef) {
+                audioRef.pause();
+            }
             
         }
+
     };
 
     
     onMount(() => {
 
-
+        // handling for when tab is changed or browser is closed
         const handleVisibilityChange = () => {
 
             // if document (e.g. tab) becomes hidden
@@ -161,6 +181,7 @@
             // disable noSleep on component unmount
             noSleep.disable(); 
         };
+
     });
     
     onDestroy(() => {
@@ -176,16 +197,9 @@
         
     });
     
-    let showConfirmModal = false;
+
+
     
-    function onConfirm() {
-        showConfirmModal = false;
-        goto('/');
-    }
-    
-    function onCancel() {
-        showConfirmModal = false;
-    }
 </script>
 
 <svelte:head>
@@ -197,92 +211,89 @@
     {/each}
 </svelte:head>
 
-{#if isCoverPageActive}
-    <div>
-        <CoverPage 
-        {prayer_name}
-        bind:isCoverPageActive={isCoverPageActive}
-        />
-    </div>
-{:else}
+<CoverPage 
+{prayer_name}
+bind:isCoverPageActive={isCoverPageActive}
+/>
 
-<div>
+{#if !isCoverPageActive}
     <div>
-        
-        <BackButton 
-        {isAutoPlaying} 
-        bind:currentStageIndex={currentStageIndex} 
-        on:stopAutoPlay={stopAutoPlay}
-        />
-        
-        <ForwardButton 
-        {isAutoPlaying}
-        {prayer}
-        bind:currentStageIndex={currentStageIndex} 
-        on:stopAutoPlay={stopAutoPlay}
-        />
-        
-        <ConfirmModal show={showConfirmModal} {onConfirm} {onCancel} />
-        
-        <div class="container-fluid">
-            <PrayerElementCounter {prayer} {currentStageIndex} />
+        <div>
             
-            <div style="display:flex; justify-content:space-between; align-items:center;">
-                <span style="text-transform:capitalize;">
-                    {prayer[currentStageIndex].name}
-                </span>
+            <BackButton 
+            {isAutoPlaying} 
+            bind:currentStageIndex={currentStageIndex} 
+            on:stopAutoPlay={stopAutoPlay}
+            />
+            
+            <ForwardButton 
+            {isAutoPlaying}
+            {prayer}
+            bind:currentStageIndex={currentStageIndex} 
+            on:stopAutoPlay={stopAutoPlay}
+            />
+            
+            <ConfirmModal bind:showConfirmModal={showConfirmModal} />
+            
+            <div class="container-fluid">
+                <PrayerElementCounter {prayer} {currentStageIndex} />
+                
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span style="text-transform:capitalize;">
+                        {prayer[currentStageIndex].name}
+                    </span>
 
-                <ExitButton 
-                {isAutoPlaying} 
-                bind:showConfirmModal={showConfirmModal}
-                on:stopAutoPlay={stopAutoPlay}
-                />
+                    <ExitButton 
+                    {isAutoPlaying} 
+                    bind:showConfirmModal={showConfirmModal}
+                    on:stopAutoPlay={stopAutoPlay}
+                    />
+                </div>
+
             </div>
-
         </div>
-    </div>
 
 
 
-    <InstructionContainer
-    {prayer}
-    {currentStageIndex}
-    />
-
-    <AudioContainer 
-    {prayer}
-    {currentStageIndex}
-    playbackSpeed={playbackSpeeds[playbackSpeedSelectedIndex]}
-    bind:hasActiveAudio={hasActiveAudio}
-    />
-
-
-    <div style="position: fixed; z-index: 2; display:flex; justify-content:flex-start; align-items:end; bottom: 3vh; width:90vw; margin:0 auto; left:0;right:0; border-radius: 100px;  background-color:white; ">
-        
-        <AutoPlayToggleButton
-        {isAutoPlaying}
-        bind:animatePlayButton={animatePlayButton}
-        bind:animatePauseButton={animatePauseButton}
-        on:startAutoPlay={startAutoPlay}
-        on:stopAutoPlay={stopAutoPlay}
+        <InstructionContainer
+        {prayer}
+        {currentStageIndex}
         />
 
-        <AudioToggleButton 
+        <AudioContainer 
+        {prayer}
+        {currentStageIndex}
+        playbackSpeed={playbackSpeeds[playbackSpeedSelectedIndex]}
         bind:hasActiveAudio={hasActiveAudio}
         />
 
-        <PlaybackSpeedButton
-        bind:autoPlayIntervalId={autoPlayIntervalId}
-        bind:playbackSpeedSelectedIndex={playbackSpeedSelectedIndex}
-        {playbackSpeeds}
-        />
 
-        <FontSizeButton />
+        <div style="position: fixed; z-index: 2; display:flex; justify-content:flex-start; align-items:end; bottom: 3vh; width: 90vw; margin:0 auto; left:0;right:0; border-radius: 100px;  background-color:white; ">
+            
+            <AutoPlayToggleButton
+            {isAutoPlaying}
+            bind:animatePlayButton={animatePlayButton}
+            bind:animatePauseButton={animatePauseButton}
+            on:startAutoPlay={startAutoPlay}
+            on:stopAutoPlay={stopAutoPlay}
+            />
 
-        <img src="/icons/settings.svg" width="50">
+            <AudioToggleButton 
+            bind:hasActiveAudio={hasActiveAudio}
+            />
 
+            <PlaybackSpeedButton
+            bind:autoPlayIntervalId={autoPlayIntervalId}
+            bind:playbackSpeedSelectedIndex={playbackSpeedSelectedIndex}
+            {playbackSpeeds}
+            />
+
+            <FontSizeButton />
+
+            <!-- <img src="/icons/settings.svg" width="50"> -->
+
+        </div>
     </div>
-</div>
 
 {/if}
 

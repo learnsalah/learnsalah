@@ -1,39 +1,49 @@
 <script>
-    export let show = false;
-    export let onConfirm = () => {};
-    export let onCancel = () => {};
+
+    import { goto } from '$app/navigation';
+
+    export let showConfirmModal = false;
+
+    function onConfirm() {
+        showConfirmModal = false;
+        goto('/');
+    }
+    
+    function onCancel() {
+        showConfirmModal = false;
+    }
 </script>
 
-{#if show}
-<div class="modal" on:click={onCancel} on:keyup={onCancel}>
-    <div class="modal-content" on:click|stopPropagation on:keyup|stopPropagation>
-        <hgroup>
-            <h2>
-                End Prayer?
-            </h2>
-            <h5>Any progress on this prayer will be lost.</h5>
-        </hgroup>
-        
-        <a href="#" 
-        class="button" style="width:100%;"
-        on:click={onConfirm}
-        on:keyup={onConfirm}
-        >
-            End Prayer
-        </a>
-        
-        <div
-        class="cancel-link-wrapper"
-        on:click={onCancel}
-        on:keyup={onCancel}
-        >
-            <a href="#">
-                Continue
+{#if showConfirmModal}
+    <div class="modal" on:click={onCancel} on:keyup={onCancel}>
+        <div class="modal-content" on:click|stopPropagation on:keyup|stopPropagation>
+            <hgroup>
+                <h2>
+                    End Prayer?
+                </h2>
+                <h5>Any progress on this prayer will be lost.</h5>
+            </hgroup>
+            
+            <a href="#" 
+            class="button" style="width:100%;"
+            on:click={onConfirm}
+            on:keyup={onConfirm}
+            >
+                End Prayer
             </a>
-        </div>
+            
+            <div
+            class="cancel-link-wrapper"
+            on:click={onCancel}
+            on:keyup={onCancel}
+            >
+                <a href="#">
+                    Continue
+                </a>
+            </div>
 
+        </div>
     </div>
-</div>
 {/if}
 
 <style>

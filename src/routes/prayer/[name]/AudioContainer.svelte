@@ -1,8 +1,6 @@
  <script lang="ts">
     import { afterUpdate } from 'svelte';
-
-    // import { createEventDispatcher } from 'svelte';
-    // const dispatch = createEventDispatcher();
+    import { audioRefStore } from '../../../store.js'; 
 
     export let prayer;
     export let currentStageIndex: number;
@@ -18,6 +16,9 @@
 
             // play audio
             audioRef.play();
+
+            // update the store
+            audioRefStore.set(audioRef);
         }
     });
 

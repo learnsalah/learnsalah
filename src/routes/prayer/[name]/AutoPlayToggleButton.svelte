@@ -25,13 +25,14 @@
 class="btn"
 on:click={toggleAutoPlay}
 on:keyup={toggleAutoPlay}
+style="margin-right:15px;"
 >
     {#if isAutoPlaying}
 
         <img 
         class:zoom-in-out-box={animatePauseButton}
-        width="70"
-        height="70"
+        width="50"
+        height="50"
         alt="pause"
         src="/icons/pause.svg">
     
@@ -39,8 +40,8 @@ on:keyup={toggleAutoPlay}
 
         <img 
         class:zoom-in-out-box={animatePlayButton}
-        width="70"
-        height="70"
+        width="50"
+        height="50"
         alt="play"
         src="/icons/play.svg">
 

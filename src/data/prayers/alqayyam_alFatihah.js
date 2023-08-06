@@ -15,7 +15,7 @@ export default [
         },
         audio_2 : {
             path : "/sounds/elmallah/af_1.mp3",
-            duration : 2100
+            duration : 2200
         }
     },
     {
@@ -49,11 +49,11 @@ export default [
         instruction : "",
         audio_1 : {
             path : "/sounds/elmallah/af_3_tajweed.mp3",
-            duration : 3000
+            duration : 3200
         },
         audio_2 : {
             path : "/sounds/elmallah/af_3.mp3",
-            duration : 2800
+            duration : 2900
         }
     },
     {
@@ -124,11 +124,11 @@ export default [
         instruction : "",
         audio_1 : {
             path : "/sounds/elmallah/af_6_tajweed.mp3",
-            duration : 4700
+            duration : 5000
         },
         audio_2 : {
             path : "/sounds/elmallah/af_6.mp3",
-            duration : 3800
+            duration : 4000
         }
     },
     { 

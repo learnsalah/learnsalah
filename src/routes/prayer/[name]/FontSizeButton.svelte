@@ -50,7 +50,7 @@ on:keyup={changeFontSize}
 
 <style>
     img {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
     }
 </style>

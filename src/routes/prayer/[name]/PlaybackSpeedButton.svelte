@@ -28,7 +28,7 @@
     on:click={changePlaybackSpeed}
     on:keyup={changePlaybackSpeed}
     class:zoom-in-out-box={animatePlaybackSpeedButton}
-    style="width: 55px; position:relative;">
+    style="width: 50px; position:relative;">
 
     <img
     alt="stopwatch" 
@@ -47,12 +47,12 @@
         align-items: center; 
 
         position: absolute;
-        top: 55%;
-        left: 51%;
+        top: 57%;
+        left: 52%;
         transform: translate(-55%, -51%);
 
-        font-weight:900;
-        color:#1e272e;
-        font-size:0.85rem;
+        font-weight: 900;
+        color: #1e272e;
+        font-size: 0.7rem;
     }
 </style>
