@@ -1,12 +1,12 @@
 import takbeer from './takbeer';
-import alqayyam_istiadhah from './alqayyam_istiadhah';
-import alqayyam_alFatihah from './alqayyam_alFatihah';
-import alqayyam_alIkhlas from './alqayyam_alIkhlas';
+import istiadhah from './istiadhah';
+import alFatihah from './alFatihah';
+import alIkhlas from './alIkhlas';
 import ruku from './ruku';
 import qayyam from './qayyam';
 import sujood from './sujood';
 import sujood2 from './sujood2';
-import alqayyam_alFalaq from './alqayyam_alFalaq';
+import alFalaq from './alFalaq';
 import tashahhud from './tashahhud';
 import durood from './durood';
 import taslim from './taslim';
@@ -15,14 +15,14 @@ import dua_thana from './dua_thana';
 const fajr = [
     ...takbeer,
     ...dua_thana,
-    ...alqayyam_istiadhah, 
-    ...alqayyam_alFatihah,
-    ...alqayyam_alIkhlas,
+    ...istiadhah, 
+    ...alFatihah,
+    ...alIkhlas,
     ...ruku,
     ...qayyam,
     ...sujood,
-    ...alqayyam_alFatihah,
-    ...alqayyam_alFalaq,
+    ...alFatihah,
+    ...alFalaq,
     ...ruku,
     ...qayyam,
     ...sujood2,
@@ -34,24 +34,24 @@ const fajr = [
 const dhuhr = [
     ...takbeer,
     ...dua_thana,
-    ...alqayyam_istiadhah, 
-    ...alqayyam_alFatihah,
-    ...alqayyam_alIkhlas,
+    ...istiadhah, 
+    ...alFatihah,
+    ...alIkhlas,
     ...ruku,
     ...qayyam,
     ...sujood,
-    ...alqayyam_alFatihah,
-    ...alqayyam_alFalaq,
+    ...alFatihah,
+    ...alFalaq,
     ...ruku,
     ...qayyam,
     ...sujood2,
     ...tashahhud,
     ...takbeer,
-    ...alqayyam_alFatihah,
+    ...alFatihah,
     ...ruku,
     ...qayyam,
     ...sujood,
-    ...alqayyam_alFatihah,
+    ...alFatihah,
     ...ruku,
     ...qayyam,
     ...sujood2,
@@ -66,20 +66,20 @@ const isha = dhuhr;
 const maghrib = [
     ...takbeer,
     ...dua_thana,
-    ...alqayyam_istiadhah, 
-    ...alqayyam_alFatihah,
-    ...alqayyam_alIkhlas,
+    ...istiadhah, 
+    ...alFatihah,
+    ...alIkhlas,
     ...ruku,
     ...qayyam,
     ...sujood,
-    ...alqayyam_alFatihah,
-    ...alqayyam_alFalaq,
+    ...alFatihah,
+    ...alFalaq,
     ...ruku,
     ...qayyam,
     ...sujood2,
     ...tashahhud,
     ...takbeer,
-    ...alqayyam_alFatihah,
+    ...alFatihah,
     ...ruku,
     ...qayyam,
     ...sujood2,
