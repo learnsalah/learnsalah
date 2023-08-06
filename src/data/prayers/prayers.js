@@ -2,11 +2,12 @@ import takbeer from './takbeer';
 import istiadhah from './istiadhah';
 import alFatihah from './alFatihah';
 import alIkhlas from './alIkhlas';
+import anNas from './anNas';
+import alFalaq from './alFalaq';
 import ruku from './ruku';
 import qayyam from './qayyam';
 import sujood from './sujood';
 import sujood2 from './sujood2';
-import alFalaq from './alFalaq';
 import tashahhud from './tashahhud';
 import durood from './durood';
 import taslim from './taslim';
@@ -41,7 +42,7 @@ const dhuhr = [
     ...qayyam,
     ...sujood,
     ...alFatihah,
-    ...alFalaq,
+    ...anNas,
     ...ruku,
     ...qayyam,
     ...sujood2,
