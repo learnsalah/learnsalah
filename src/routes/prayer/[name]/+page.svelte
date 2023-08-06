@@ -268,7 +268,7 @@ bind:isCoverPageActive={isCoverPageActive}
         />
 
 
-        <div style="position: fixed; z-index: 2; display:flex; justify-content:flex-start; align-items:end; bottom: 3vh; width: 90vw; margin:0 auto; left:0;right:0; border-radius: 100px;  background-color:white; ">
+        <div style="position: fixed; z-index: 2; display:flex; justify-content:flex-start; align-items:end; bottom: 3vh; width: 90vw; margin:0 auto; left:0;right:0; border-radius: 100px;  background-color:transparent; ">
             
             <AutoPlayToggleButton
             {isAutoPlaying}
