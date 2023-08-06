@@ -25,6 +25,9 @@
             <li>
                 <strong>Abubakr Elmallah</strong> - for generously providing the remarkable audio tracks for the prayers
             </li>
+            <li>
+                To all those who have kindly made donations to support us
+            </li>
         </ul>
         
         <p>

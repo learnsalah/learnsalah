@@ -60,35 +60,58 @@
                             Our Expenses
                         </h3>
                         <h4>
-                            As of August 2023
+                            2023
                         </h4>
                     </hgroup>
-                    <ul>
+
+                    <strong>
+                        Total expenses to run this server: 
+                        <span style="color:#d63031;">
+                            $228 / year
+                        </span>
+                    </strong>
+
+                    <ul style="margin-top: 30px;">
                         <li>
                             <strong style="color:#d63031;">
-                                $17/mo.
+                                $17/mo. 
                             </strong>
-                            Akamai Linode 4GB VM + Back-Up
+                            Akamai Linode Shared 4GB VM + Back-Up
                         </li>
                         <li>
                             <strong style="color:#d63031;">
-                                $24/yr.
+                                $24/yr. 
                             </strong>
                             Domain Name Registar Fees
                         </li>
                     </ul>
                 </div>
+
+
                 <div>
                     <hgroup>
                         <h3>
                             Donations received
                         </h3>
                         <h4>
-                            As of August 2023
+                            2023
                         </h4>
                     </hgroup>
-                    <ul>
-                        <li>-</li>
+
+                    <strong>
+                        Total donations received:
+                        <span style="color:#218c74;">
+                            $205 of $228 (Target)
+                        </span>
+                    </strong>
+
+                    <ul style="margin-top: 30px;">
+                        <li>
+                            <strong style="color:#218c74;">
+                                $205 
+                            </strong>
+                            Abdullah
+                        </li>
                     </ul>
                 </div>
             </div>
