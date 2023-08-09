@@ -19,11 +19,11 @@ export default [
         img : "/images/standing.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/q_1.mp3",
+            path : "/sounds/audio_1/q_1.mp3",
             duration : 4200
         },
         audio_2 : {
-            path : "/sounds/elmallah/q_1.mp3",
+            path : "/sounds/audio_2/q_1.mp3",
             duration : 4200
         }
     },
@@ -47,11 +47,11 @@ export default [
         img : "/images/standing3.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/q_2.mp3",
+            path : "/sounds/audio_1/q_2.mp3",
             duration : 3200
         },
         audio_2 : {
-            path : "/sounds/elmallah/q_2.mp3",
+            path : "/sounds/audio_2/q_2.mp3",
             duration : 3200
         }
     }

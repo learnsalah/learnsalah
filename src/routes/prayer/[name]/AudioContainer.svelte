@@ -14,8 +14,8 @@
             // set playback speed
             audioRef.playbackRate = playbackSpeed;
 
-            // play audio
-            audioRef.play();
+            // Play the audio - nasty hack because it throws an error 
+            audioRef.play().catch(_error => {});;
 
             // update the store
             audioRefStore.set(audioRef);

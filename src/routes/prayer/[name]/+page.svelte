@@ -61,63 +61,80 @@
     ];
     $: preloadImageUrls = images.map((image) => `/images/${image}.jpg`);
 
-    
+    const proceedToNextStage = () => {
+        if (currentStageIndex < prayer.length - 1) {
+            currentStageIndex++;
+        } else {
+            // If end of stages has been reached, just stop auto play
+            stopAutoPlay();
+            return;
+        }
+        // Re-trigger the function
+        startAutoPlay();
+    };
+
+    // Function to handle the end of the audio
+    const handleAudioEnded = () => {
+        audioRef.removeEventListener('ended', handleAudioEnded); 
+        proceedToNextStage();
+    };
+
+    const triggerStaticTimeFramePlayback = () => {
+
+        // If no audio, revert to static time frame
+        let playbackDuration = prayer[currentStageIndex].audio_1.duration;
+        let playbackSpeedMultiplier = 1 / playbackSpeeds[playbackSpeedSelectedIndex];
+        // Set timeout for this stage
+        autoPlayIntervalId = setTimeout(proceedToNextStage, playbackSpeedMultiplier * playbackDuration);
+
+    };
+
+    const triggerAudioSyncPlayback = () => {
+
+        // Attach the listener for when the audio ends
+        audioRef.addEventListener('ended', handleAudioEnded);
+
+        // Play the audio - nasty hack because it throws an error 
+        audioRef.play().catch(_error => {});;
+
+    };
+
     const startAutoPlay = () => {
 
         // Always clear the interval
         if (autoPlayIntervalId) {
             clearTimeout(autoPlayIntervalId);
         }
-        
-        if (!isAutoPlaying) {
 
-            // animate pause button bouncing
+        if (!isAutoPlaying) {
+            // Animate pause button bouncing
             animatePauseButton = true;
             setTimeout(() => {
                 animatePauseButton = false;
             }, 300);
-            
+
             // Set isAutoPlaying to true
             isAutoPlaying = true;
-            
-            // enable nosleep
+
+            // Enable nosleep
             noSleep.enable();
             noSleepEnabled = true;
-
-            // play current audio track when play button is hit
-            if (hasActiveAudio && audioRef) {
-                audioRef.play();
-            }
-
         }
 
-        let playbackDuration = prayer[currentStageIndex].audio_1.duration;
-        let playbackSpeedMultiplier = 1/playbackSpeeds[playbackSpeedSelectedIndex];
-        
+        // Play current audio track when play button is hit
+        if (hasActiveAudio && audioRef) {
 
-        if (isAutoPlaying) {
+            triggerAudioSyncPlayback()
 
-            // set timeout for this stage
-            autoPlayIntervalId = setTimeout(() => {
-                
-                if (currentStageIndex < prayer.length - 1) {
-                    currentStageIndex++;
-                } else {
-                    // if end of stages has been reached, just stop auto play
-                    stopAutoPlay();
-                    return;
-                }
-                
-                // Re-trigger the function after the current stage's duration
-                startAutoPlay();
+        } else {
 
-            },  playbackSpeedMultiplier * playbackDuration);
+            triggerStaticTimeFramePlayback()
+
         }
     };
     
-    
     const stopAutoPlay = () => {
-        
+
         // Always clear the interval
         if (autoPlayIntervalId) {
             clearTimeout(autoPlayIntervalId);
@@ -138,9 +155,14 @@
                 animatePlayButton = false;
             }, 300);
 
-            // stop current audio track when pause button is hit
+            // pause current audio track when pause button is hit
             if (hasActiveAudio && audioRef) {
+
+                // pause audio
                 audioRef.pause();
+
+                // remove event listener from audio
+                audioRef.removeEventListener('ended', handleAudioEnded);
             }
             
         }
@@ -204,11 +226,19 @@
 
 <svelte:head>
     {#each preloadIconUrls as image}
-        <link rel="preload" as="image" href={image} />
+        <link 
+        rel="preload" 
+        as="image"
+        type="image/svg+xml"
+        href={image} />
     {/each}
     {#each preloadImageUrls as image}
-        <link rel="preload" as="image" href={image} />
-    {/each}
+        <link 
+        rel="preload" 
+        as="image"
+        type="image/jpg"
+        href={image} />
+    {/each}  
 </svelte:head>
 
 <CoverPage 
@@ -217,6 +247,7 @@ bind:isCoverPageActive={isCoverPageActive}
 />
 
 {#if !isCoverPageActive}
+
     <div>
         <div>
             
@@ -233,7 +264,8 @@ bind:isCoverPageActive={isCoverPageActive}
             on:stopAutoPlay={stopAutoPlay}
             />
             
-            <ConfirmModal bind:showConfirmModal={showConfirmModal} />
+            <ConfirmModal 
+            bind:showConfirmModal={showConfirmModal} />
             
             <div class="container-fluid">
                 <PrayerElementCounter {prayer} {currentStageIndex} />
@@ -252,7 +284,6 @@ bind:isCoverPageActive={isCoverPageActive}
 
             </div>
         </div>
-
 
 
         <InstructionContainer
@@ -278,8 +309,11 @@ bind:isCoverPageActive={isCoverPageActive}
             on:stopAutoPlay={stopAutoPlay}
             />
 
-            <AudioToggleButton 
+            <AudioToggleButton
+            {isAutoPlaying}
             bind:hasActiveAudio={hasActiveAudio}
+            on:triggerStaticTimeFramePlayback={triggerStaticTimeFramePlayback}
+            on:startAutoPlay={startAutoPlay}
             />
 
             <PlaybackSpeedButton

@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
 
     import { goto } from '$app/navigation';
 
-    export let showConfirmModal = false;
+    export let showConfirmModal : boolean = false;
 
     function onConfirm() {
         showConfirmModal = false;

@@ -19,11 +19,11 @@ export default [
         img : "/images/sitting_right.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/taslim_1.mp3",
+            path : "/sounds/audio_1/taslim_1.mp3",
             duration : 4200
         },
-        audio_2 : { 
-            path : "/sounds/elmallah/taslim_1.mp3",
+        audio_2 : {
+            path : "/sounds/audio_2/taslim_1.mp3",
             duration : 4200
         }
     },
@@ -47,11 +47,11 @@ export default [
         img : "/images/sitting_left.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/taslim_1.mp3",
+            path : "/sounds/audio_1/taslim_1.mp3",
             duration : 4200
         },
-        audio_2 : { 
-            path : "/sounds/elmallah/taslim_1.mp3",
+        audio_2 : {
+            path : "/sounds/audio_2/taslim_1.mp3",
             duration : 4200
         }
     }

@@ -19,11 +19,11 @@ export default [
         img : "/images/sitting2.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/t_1.mp3",
+            path : "/sounds/audio_1/t_1.mp3",
             duration : 2800
         },
-        audio_2 : { 
-            path : "/sounds/elmallah/t_1.mp3",
+        audio_2 : {
+            path : "/sounds/audio_2/t_1.mp3",
             duration : 2800
         }
     },
@@ -44,11 +44,11 @@ export default [
         img : "/images/sitting2.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/t_2.mp3",
+            path : "/sounds/audio_1/t_2.mp3",
             duration : 3200
         },
-        audio_2 : { 
-            path : "/sounds/elmallah/t_2.mp3",
+        audio_2 : {
+            path : "/sounds/audio_2/t_2.mp3",
             duration : 3200
         }
     },
@@ -72,11 +72,11 @@ export default [
         img: "/images/sitting2.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/t_3.mp3",
+            path : "/sounds/audio_1/t_3.mp3",
             duration : 3800
         },
-        audio_2 : { 
-            path : "/sounds/elmallah/t_3.mp3",
+        audio_2 : {
+            path : "/sounds/audio_2/t_3.mp3",
             duration : 3800
         }
     },
@@ -100,11 +100,11 @@ export default [
         img: "/images/sitting2.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/t_4.mp3",
+            path : "/sounds/audio_1/t_4.mp3",
             duration : 3700
         },
-        audio_2 : { 
-            path : "/sounds/elmallah/t_4.mp3",
+        audio_2 : {
+            path : "/sounds/audio_2/t_4.mp3",
             duration : 3700
         }
     },
@@ -128,11 +128,11 @@ export default [
         img: "/images/sitting2.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/t_5.mp3",
+            path : "/sounds/audio_1/t_5.mp3",
             duration : 2500
         },
-        audio_2 : { 
-            path : "/sounds/elmallah/t_5.mp3",
+        audio_2 : {
+            path : "/sounds/audio_2/t_5.mp3",
             duration : 2500
         }
     },
@@ -156,11 +156,11 @@ export default [
         img: "/images/sitting2.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/t_6.mp3",
+            path : "/sounds/audio_1/t_6.mp3",
             duration : 4000
         },
-        audio_2 : { 
-            path : "/sounds/elmallah/t_6.mp3",
+        audio_2 : {
+            path : "/sounds/audio_2/t_6.mp3",
             duration : 4000
         }
     },
@@ -184,11 +184,11 @@ export default [
         img : "/images/sitting2.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/t_7.mp3",
+            path : "/sounds/audio_1/t_7.mp3",
             duration : 4000
         },
-        audio_2 : { 
-            path : "/sounds/elmallah/t_7.mp3",
+        audio_2 : {
+            path : "/sounds/audio_2/t_7.mp3",
             duration : 4000
         }
     },
@@ -212,11 +212,11 @@ export default [
         img: "/images/sitting2.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/t_8.mp3",
+            path : "/sounds/audio_1/t_8.mp3",
             duration : 3000
         },
-        audio_2 : { 
-            path : "/sounds/elmallah/t_8.mp3",
+        audio_2 : {
+            path : "/sounds/audio_2/t_8.mp3",
             duration : 3000
         }
     },
@@ -240,11 +240,11 @@ export default [
         img: "/images/sitting2.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/t_9.mp3",
+            path : "/sounds/audio_1/t_9.mp3",
             duration : 3100
         },
-        audio_2 : { 
-            path : "/sounds/elmallah/t_9.mp3",
+        audio_2 : {
+            path : "/sounds/audio_2/t_9.mp3",
             duration : 3100
         }
     }

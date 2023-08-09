@@ -19,11 +19,11 @@ export default [
         img : "/images/standing2.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/dt_1.mp3",
+            path : "/sounds/audio_1/dt_1.mp3",
             duration : 3000
         },
         audio_2 : {
-            path : "/sounds/elmallah/dt_1.mp3",
+            path : "/sounds/audio_2/dt_1.mp3",
             duration : 2700
         }
     },
@@ -47,11 +47,11 @@ export default [
         img : "/images/standing2.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/dt_2.mp3",
+            path : "/sounds/audio_1/dt_2.mp3",
             duration : 2500
         },
         audio_2 : {
-            path : "/sounds/elmallah/dt_2.mp3",
+            path : "/sounds/audio_2/dt_2.mp3",
             duration : 2000
         }
     },
@@ -75,11 +75,11 @@ export default [
         img : "/images/standing2.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/dt_3.mp3",
+            path : "/sounds/audio_1/dt_3.mp3",
             duration : 3300
         },
         audio_2 : {
-            path : "/sounds/elmallah/dt_3.mp3",
+            path : "/sounds/audio_2/dt_3.mp3",
             duration : 2700
         }
     },
@@ -103,11 +103,11 @@ export default [
         img : "/images/standing2.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/dt_4.mp3",
+            path : "/sounds/audio_1/dt_4.mp3",
             duration : 3000
         },
         audio_2 : {
-            path : "/sounds/elmallah/dt_4.mp3",
+            path : "/sounds/audio_2/dt_4.mp3",
             duration : 2600
         }
     },
@@ -131,11 +131,11 @@ export default [
         img : "/images/standing2.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/dt_5.mp3",
+            path : "/sounds/audio_1/dt_5.mp3",
             duration : 3000
         },
         audio_2 : {
-            path : "/sounds/elmallah/dt_5.mp3",
+            path : "/sounds/audio_2/dt_5.mp3",
             duration : 2900
         }
     }

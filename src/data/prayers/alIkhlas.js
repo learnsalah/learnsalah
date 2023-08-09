@@ -19,11 +19,11 @@ export default [
         img: "/images/standing2.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/ai_1_tajweed.mp3",
+            path : "/sounds/audio_1/ai_1_tajweed.mp3",
             duration : 3500
         },
         audio_2 : {
-            path : "/sounds/elmallah/ai_1.mp3",
+            path : "/sounds/audio_2/ai_1.mp3",
             duration : 2600
         }
     },
@@ -47,11 +47,11 @@ export default [
         img: "/images/standing2.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/ai_2_tajweed.mp3",
+            path : "/sounds/audio_1/ai_2_tajweed.mp3",
             duration : 3400
         },
         audio_2 : {
-            path : "/sounds/elmallah/ai_2.mp3",
+            path : "/sounds/audio_2/ai_2.mp3",
             duration : 2400
         }
     },
@@ -75,11 +75,11 @@ export default [
         img: "/images/standing2.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/ai_3_tajweed.mp3",
+            path : "/sounds/audio_1/ai_3_tajweed.mp3",
             duration : 3800
         },
         audio_2 : {
-            path : "/sounds/elmallah/ai_3.mp3",
+            path : "/sounds/audio_2/ai_3.mp3",
             duration : 3100
         }
     },
@@ -102,11 +102,11 @@ export default [
         img: "/images/standing2.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/ai_4_tajweed.mp3",
+            path : "/sounds/audio_1/ai_4_tajweed.mp3",
             duration : 4500
         },
         audio_2 : {
-            path : "/sounds/elmallah/ai_4.mp3",
+            path : "/sounds/audio_2/ai_4.mp3",
             duration : 4200
         }
     }

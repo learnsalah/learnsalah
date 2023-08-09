@@ -10,11 +10,11 @@ export default [
         img : "/images/sujood.jpg",
         instruction : "As you prostrate say",
         audio_1 : {
-            path : "/sounds/elmallah/takbeer_1_tajweed.mp3",
+            path : "/sounds/audio_1/takbeer_1_tajweed.mp3",
             duration : 4000 + 3000
         },
-        audio_2 : { 
-            path : "/sounds/elmallah/takbeer_1.mp3",
+        audio_2 : {
+            path : "/sounds/audio_2/takbeer_1.mp3",
             duration : 4000 + 2200
         }
     },
@@ -29,11 +29,11 @@ export default [
         img : "/images/sujood.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/s_1.mp3",
+            path : "/sounds/audio_1/s_1.mp3",
             duration : 1000 + 3500
         },
-        audio_2 : { 
-            path : "/sounds/elmallah/s_1.mp3",
+        audio_2 : {
+            path : "/sounds/audio_2/s_1.mp3",
             duration : 1000 + 3500
         }
     },
@@ -48,11 +48,11 @@ export default [
         img : "/images/sujood.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/s_1.mp3",
+            path : "/sounds/audio_1/s_1.mp3",
             duration : 3500
         },
-        audio_2 : { 
-            path : "/sounds/elmallah/s_1.mp3",
+        audio_2 : {
+            path : "/sounds/audio_2/s_1.mp3",
             duration : 3500
         }
     },
@@ -67,11 +67,11 @@ export default [
         img : "/images/sujood.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/s_1.mp3",
+            path : "/sounds/audio_1/s_1.mp3",
             duration : 3500 + 1000
         },
-        audio_2 : { 
-            path : "/sounds/elmallah/s_1.mp3",
+        audio_2 : {
+            path : "/sounds/audio_2/s_1.mp3",
             duration : 3500 + 1000 
         }
     },
@@ -86,11 +86,11 @@ export default [
         img : "/images/sitting.jpg",
         instruction : "As you sit back up say",
         audio_1 : {
-            path : "/sounds/elmallah/takbeer_1_tajweed.mp3",
+            path : "/sounds/audio_1/takbeer_1_tajweed.mp3",
             duration : 3000 + 4000
         },
-        audio_2 : { 
-            path : "/sounds/elmallah/takbeer_1.mp3",
+        audio_2 : {
+            path : "/sounds/audio_2/takbeer_1.mp3",
             duration : 2200 + 4000
         }
     },
@@ -105,11 +105,11 @@ export default [
         img: "/images/sitting.jpg", 
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/s_2.mp3",
+            path : "/sounds/audio_1/s_2.mp3",
             duration : 2300
         },
-        audio_2 : { 
-            path : "/sounds/elmallah/s_2.mp3",
+        audio_2 : {
+            path : "/sounds/audio_2/s_2.mp3",
             duration : 2300
         }
     },
@@ -124,11 +124,11 @@ export default [
         img: "/images/sitting.jpg", 
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/s_2.mp3",
+            path : "/sounds/audio_1/s_2.mp3",
             duration : 2300 + 1000
         },
-        audio_2 : { 
-            path : "/sounds/elmallah/s_2.mp3",
+        audio_2 : {
+            path : "/sounds/audio_2/s_2.mp3",
             duration : 2300 + 1000
         }
     },
@@ -143,11 +143,11 @@ export default [
         img : "/images/sujood.jpg",
         instruction : "As you prostrate say",
         audio_1 : {
-            path : "/sounds/elmallah/takbeer_1_tajweed.mp3",
+            path : "/sounds/audio_1/takbeer_1_tajweed.mp3",
             duration : 4000 + 3000
         },
-        audio_2 : { 
-            path : "/sounds/elmallah/takbeer_1.mp3",
+        audio_2 : {
+            path : "/sounds/audio_2/takbeer_1.mp3",
             duration : 4000 + 2200
         }
     },
@@ -162,11 +162,11 @@ export default [
         img : "/images/sujood.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/s_1.mp3",
+            path : "/sounds/audio_1/s_1.mp3",
             duration : 1000 + 3500
         },
-        audio_2 : { 
-            path : "/sounds/elmallah/s_1.mp3",
+        audio_2 : {
+            path : "/sounds/audio_2/s_1.mp3",
             duration : 1000 + 3500
         }
     },
@@ -181,11 +181,11 @@ export default [
         img : "/images/sujood.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/s_1.mp3",
+            path : "/sounds/audio_1/s_1.mp3",
             duration : 3500
         },
-        audio_2 : { 
-            path : "/sounds/elmallah/s_1.mp3",
+        audio_2 : {
+            path : "/sounds/audio_2/s_1.mp3",
             duration : 3500
         }
     },
@@ -200,11 +200,11 @@ export default [
         img : "/images/sujood.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/s_1.mp3",
+            path : "/sounds/audio_1/s_1.mp3",
             duration : 3500 + 1000
         },
-        audio_2 : { 
-            path : "/sounds/elmallah/s_1.mp3",
+        audio_2 : {
+            path : "/sounds/audio_2/s_1.mp3",
             duration : 3500 + 1000 
         }
     },
@@ -219,11 +219,11 @@ export default [
         img: "/images/standing.jpg",
         instruction : "Stand back up",
         audio_1 : {
-            path : "/sounds/elmallah/takbeer_1_tajweed.mp3",
+            path : "/sounds/audio_1/takbeer_1_tajweed.mp3",
             duration : 4000 + 3000
         },
-        audio_2 : { 
-            path : "/sounds/elmallah/takbeer_1.mp3",
+        audio_2 : {
+            path : "/sounds/audio_2/takbeer_1.mp3",
             duration : 4000 + 2200,
         }
     }

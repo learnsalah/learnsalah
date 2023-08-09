@@ -10,11 +10,11 @@ export default [
         img : "/images/standing.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/takbeer_1_tajweed.mp3",
+            path : "/sounds/audio_1/takbeer_1_tajweed.mp3",
             duration : 1000 + 3000
         },
-        audio_2 : { 
-            path : "/sounds/elmallah/takbeer_1.mp3",
+        audio_2 : {
+            path : "/sounds/audio_2/takbeer_1.mp3",
             duration : 1000 + 2200
         }
     },
@@ -38,11 +38,11 @@ export default [
         img : "/images/ruku.jpg",
         instruction : "Bow at waist, place hands on knees",
         audio_1 : {
-            path : "/sounds/elmallah/ruku_1.mp3",
+            path : "/sounds/audio_1/ruku_1.mp3",
             duration : 1000 + 3200
         },
         audio_2 : {
-            path : "/sounds/elmallah/ruku_1.mp3",
+            path : "/sounds/audio_2/ruku_1.mp3",
             duration : 1000 + 3200
         }
     },
@@ -66,11 +66,11 @@ export default [
         img : "/images/ruku.jpg",
         instruction : "Bow at waist, place hands on knees",
         audio_1 : {
-            path : "/sounds/elmallah/ruku_1.mp3",
+            path : "/sounds/audio_1/ruku_1.mp3",
             duration : 300 + 3200
         },
         audio_2 : {
-            path : "/sounds/elmallah/ruku_1.mp3",
+            path : "/sounds/audio_2/ruku_1.mp3",
             duration : 300 + 3200
         }
     },
@@ -94,11 +94,11 @@ export default [
         img : "/images/ruku.jpg",
         instruction : "Bow at waist, place hands on knees",
         audio_1 : {
-            path : "/sounds/elmallah/ruku_1.mp3",
+            path : "/sounds/audio_1/ruku_1.mp3",
             duration : 3200 + 2000
         },
         audio_2 : {
-            path : "/sounds/elmallah/ruku_1.mp3",
+            path : "/sounds/audio_2/ruku_1.mp3",
             duration : 3200 + 2000
         }
     }

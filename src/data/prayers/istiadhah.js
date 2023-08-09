@@ -10,11 +10,11 @@ export default [
         img: "/images/standing2.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/i_1_tajweed.mp3",
+            path : "/sounds/audio_1/i_1_tajweed.mp3",
             duration : 3000
         },
         audio_2 : {
-            path : "/sounds/elmallah/i_1.mp3",
+            path : "/sounds/audio_2/i_1.mp3",
             duration : 2500
         }
     },
@@ -29,11 +29,11 @@ export default [
         img: "/images/standing2.jpg",
         instruction : "",
         audio_1 : {
-            path : "/sounds/elmallah/i_2_tajweed.mp3",
+            path : "/sounds/audio_1/i_2_tajweed.mp3",
             duration : 4300
         },
         audio_2 : {
-            path : "/sounds/elmallah/i_2.mp3",
+            path : "/sounds/audio_2/i_2.mp3",
             duration : 4300
         }
     }
