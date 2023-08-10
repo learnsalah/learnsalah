@@ -108,6 +108,12 @@
                     <ul style="margin-top: 30px;">
                         <li>
                             <strong style="color:#218c74;">
+                                $110
+                            </strong>
+                            H.
+                        </li>
+                        <li>
+                            <strong style="color:#218c74;">
                                 $205 
                             </strong>
                             Abdullah

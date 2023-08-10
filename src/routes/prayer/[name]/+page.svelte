@@ -17,6 +17,7 @@
 	import AudioToggleButton from './AudioToggleButton.svelte';
 	import AutoPlayToggleButton from './AutoPlayToggleButton.svelte';
 	import AudioContainer from './AudioContainer.svelte';
+    import SettingsButton from './SettingsButton.svelte';
     
     export let data;
     let prayer_name = data.prayer.name;
@@ -132,6 +133,18 @@
 
         }
     };
+
+    const stopAudio = () => {
+        // pause current audio track
+        if (hasActiveAudio && audioRef) {
+
+            // pause audio
+            audioRef.pause();
+
+            // remove event listener from audio
+            audioRef.removeEventListener('ended', handleAudioEnded);
+        }
+    };
     
     const stopAutoPlay = () => {
 
@@ -139,7 +152,7 @@
         if (autoPlayIntervalId) {
             clearTimeout(autoPlayIntervalId);
         }
-        
+
         if (isAutoPlaying){
             
             // Set isAutoPlaying to false
@@ -155,15 +168,7 @@
                 animatePlayButton = false;
             }, 300);
 
-            // pause current audio track when pause button is hit
-            if (hasActiveAudio && audioRef) {
-
-                // pause audio
-                audioRef.pause();
-
-                // remove event listener from audio
-                audioRef.removeEventListener('ended', handleAudioEnded);
-            }
+            stopAudio()
             
         }
 
@@ -276,9 +281,11 @@ bind:isCoverPageActive={isCoverPageActive}
                     </span>
 
                     <ExitButton 
-                    {isAutoPlaying} 
+                    {isAutoPlaying}
+                    {hasActiveAudio}
                     bind:showConfirmModal={showConfirmModal}
                     on:stopAutoPlay={stopAutoPlay}
+                    on:stopAudio={stopAudio}
                     />
                 </div>
 
@@ -324,7 +331,9 @@ bind:isCoverPageActive={isCoverPageActive}
 
             <FontSizeButton />
 
-            <!-- <img src="/icons/settings.svg" width="50"> -->
+            <SettingsButton 
+
+            />
 
         </div>
     </div>

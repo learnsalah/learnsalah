@@ -1,24 +1,32 @@
-<script>
+<script lang="ts">
 
     import { createEventDispatcher } from 'svelte';
 
-    export let isAutoPlaying;
+    export let isAutoPlaying : boolean;
+    export let hasActiveAudio : boolean;
     export let showConfirmModal;
     let animateExitCross = false;
 
     const dispatch = createEventDispatcher();
 
     const navigateHome = () => {
-        if (isAutoPlaying) {
-            dispatch('stopAutoPlay');
-        }
-        
+
         // animate exit cross bouncing
         animateExitCross = true;
         setTimeout(() => {
             animateExitCross = false;
         }, 300);
         
+        // if auto play is active, stop it
+        if (isAutoPlaying) {
+            dispatch('stopAutoPlay');
+        }
+
+        // if audio is active, stop it
+        if (hasActiveAudio) {
+            dispatch('stopAudio');
+        }
+
         showConfirmModal = true;
         
     }
