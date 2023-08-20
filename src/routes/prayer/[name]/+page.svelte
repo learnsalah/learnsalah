@@ -1,12 +1,15 @@
-<script>
+<script lang="ts">
     import { onMount, onDestroy } from 'svelte';
+    import { get } from 'svelte/store';
     
     import NoSleep from 'nosleep.js'
 
-    import { audioRefStore } from '../../../store.js'; 
+    import audioStore from '$lib/stores/audio/audioStore';
+    import settingsStore from '$lib/stores/settings/settingsStore';
     
     import PrayerElementCounter from "./PrayerElementCounter.svelte"
-    import ConfirmModal from './ConfirmModal.svelte';
+    import ExitModal from './ExitModal.svelte';
+    import Modal from '../../Modal.svelte';
     import BackButton from './BackButton.svelte';
     import ForwardButton from './ForwardButton.svelte';
 	import ExitButton from './ExitButton.svelte';
@@ -16,43 +19,41 @@
 	import CoverPage from './CoverPage.svelte';
 	import AudioToggleButton from './AudioToggleButton.svelte';
 	import AutoPlayToggleButton from './AutoPlayToggleButton.svelte';
-	import AudioContainer from './AudioContainer.svelte';
-    import SettingsButton from './SettingsButton.svelte';
     
-    export let data;
-    let prayer_name = data.prayer.name;
-    let prayer = data.prayer.prayer;
-    
-    let autoPlayIntervalId;
 
-    // flag to store the autoplay state
-    let isAutoPlaying = false; 
-    
-    let currentStageIndex = 0;
-    
-    let animatePlayButton               = false;
-    let animatePauseButton              = false;
-    
-    let noSleep;
-    let noSleepEnabled = false;
 
-    let isCoverPageActive = true;
+    /*
+        Prayer Settings Variables
+    */
+    // Retrieve the current value of the settingsStore
+    const settingsStoreValues = get(settingsStore);
 
-    let hasActiveAudio = false;
+    // Extract the values
+    const sunnahRituals = settingsStoreValues.sunnahRituals;
+    const sunnahPrayers = settingsStoreValues.sunnahPrayers;
+    const maleFemaleImage = settingsStoreValues.maleFemaleImage;
 
-    let playbackSpeeds = [1, 0.7, 1.5];
-    let playbackSpeedSelectedIndex = 0;
-
-    let showConfirmModal = false;
-
+    /*
+        Audio Store Variables
+    */
     let audioRef;
+    let isAudioActive : boolean;
+    let playbackSpeed : number;
 
-    audioRefStore.subscribe(value => {
-        audioRef = value;
+    audioStore.subscribe(storeValues => {
+        audioRef = storeValues.audioRef;
+        isAudioActive = storeValues.isAudioActive;
+        playbackSpeed = storeValues.playbackSpeed;
     });
 
-    
-    let icons = ["play", "pause", "cross", "font-size", "stopwatch", "speaker_off", "speaker_on", "settings"]
+    const audioStoreValues = get(audioStore);
+    const speaker = audioStoreValues.speaker;
+    $: audioDuration = prayer[currentStageIndex]?.[speaker]?.duration;
+
+    /*
+        Preloading Icons + Images
+    */
+    let icons = ["play", "pause", "cross", "font-size", "stopwatch", "speaker_off", "speaker_on"]
     $: preloadIconUrls = icons.map((icon) => `/icons/${icon}.svg`);
 
     let images = [
@@ -61,6 +62,41 @@
         "sujood"
     ];
     $: preloadImageUrls = images.map((image) => `/images/${image}.jpg`);
+
+
+    /*
+        Declaring prayer meta data (from URL parameter)
+    */
+
+    export let data;
+    // holding prayer steps according to preferences
+    let prayer = null;
+    // get prayer name
+    let prayer_name = data.prayer.name;
+    // get prayer steps according to preferences
+    if (sunnahRituals === 'true') {
+        prayer = data.prayer.prayer.sunnah_rituals;
+
+    }else {
+        prayer = data.prayer.prayer.bare;
+    }
+ 
+    
+    let autoPlayIntervalId;
+
+    // flag to store the autoplay state
+    let isAutoPlaying = false; 
+    
+    let currentStageIndex = 0;
+    
+    let animatePlayButton  = false;
+    let animatePauseButton = false;
+    
+    let noSleep;
+
+    let isCoverPageActive = true;
+    let showConfirmModal = false;
+
 
     const proceedToNextStage = () => {
         if (currentStageIndex < prayer.length - 1) {
@@ -76,6 +112,7 @@
 
     // Function to handle the end of the audio
     const handleAudioEnded = () => {
+
         audioRef.removeEventListener('ended', handleAudioEnded); 
         proceedToNextStage();
     };
@@ -83,22 +120,13 @@
     const triggerStaticTimeFramePlayback = () => {
 
         // If no audio, revert to static time frame
-        let playbackDuration = prayer[currentStageIndex].audio_1.duration;
-        let playbackSpeedMultiplier = 1 / playbackSpeeds[playbackSpeedSelectedIndex];
+        let playbackDuration = audioDuration;
+        let playbackSpeedMultiplier = 1 / playbackSpeed;
         // Set timeout for this stage
         autoPlayIntervalId = setTimeout(proceedToNextStage, playbackSpeedMultiplier * playbackDuration);
 
     };
 
-    const triggerAudioSyncPlayback = () => {
-
-        // Attach the listener for when the audio ends
-        audioRef.addEventListener('ended', handleAudioEnded);
-
-        // Play the audio - nasty hack because it throws an error 
-        audioRef.play().catch(_error => {});;
-
-    };
 
     const startAutoPlay = () => {
 
@@ -119,13 +147,13 @@
 
             // Enable nosleep
             noSleep.enable();
-            noSleepEnabled = true;
         }
 
         // Play current audio track when play button is hit
-        if (hasActiveAudio && audioRef) {
+        if (isAudioActive && audioRef) {
 
-            triggerAudioSyncPlayback()
+            // Attach the listener for when the audio ends
+            audioRef.addEventListener('ended', handleAudioEnded);
 
         } else {
 
@@ -135,14 +163,21 @@
     };
 
     const stopAudio = () => {
+
         // pause current audio track
-        if (hasActiveAudio && audioRef) {
+        if (isAudioActive && audioRef) {
 
             // pause audio
             audioRef.pause();
 
             // remove event listener from audio
             audioRef.removeEventListener('ended', handleAudioEnded);
+
+            // update store value
+            audioStore.update(storeValues => ({
+                ...storeValues,
+                isAudioActive: false
+            }));
         }
     };
     
@@ -160,7 +195,6 @@
             
             // disable nosleep
             noSleep.disable();
-            noSleepEnabled = false;
             
             // animate play button bouncing
             animatePlayButton = true;
@@ -255,7 +289,7 @@ bind:isCoverPageActive={isCoverPageActive}
 
     <div>
         <div>
-            
+
             <BackButton 
             {isAutoPlaying} 
             bind:currentStageIndex={currentStageIndex} 
@@ -269,8 +303,10 @@ bind:isCoverPageActive={isCoverPageActive}
             on:stopAutoPlay={stopAutoPlay}
             />
             
-            <ConfirmModal 
-            bind:showConfirmModal={showConfirmModal} />
+            <Modal bind:showModal={showConfirmModal}>
+                <ExitModal/>
+            </Modal>
+            
             
             <div class="container-fluid">
                 <PrayerElementCounter {prayer} {currentStageIndex} />
@@ -282,7 +318,6 @@ bind:isCoverPageActive={isCoverPageActive}
 
                     <ExitButton 
                     {isAutoPlaying}
-                    {hasActiveAudio}
                     bind:showConfirmModal={showConfirmModal}
                     on:stopAutoPlay={stopAutoPlay}
                     on:stopAudio={stopAudio}
@@ -298,15 +333,8 @@ bind:isCoverPageActive={isCoverPageActive}
         {currentStageIndex}
         />
 
-        <AudioContainer 
-        {prayer}
-        {currentStageIndex}
-        playbackSpeed={playbackSpeeds[playbackSpeedSelectedIndex]}
-        bind:hasActiveAudio={hasActiveAudio}
-        />
 
-
-        <div style="position: fixed; z-index: 2; display:flex; justify-content:flex-start; align-items:end; bottom: 3vh; width: 90vw; margin:0 auto; left:0;right:0; border-radius: 100px;  background-color:transparent; ">
+        <div class="button-bar">
             
             <AutoPlayToggleButton
             {isAutoPlaying}
@@ -318,22 +346,14 @@ bind:isCoverPageActive={isCoverPageActive}
 
             <AudioToggleButton
             {isAutoPlaying}
-            bind:hasActiveAudio={hasActiveAudio}
+            {prayer}
+            {currentStageIndex}
             on:triggerStaticTimeFramePlayback={triggerStaticTimeFramePlayback}
-            on:startAutoPlay={startAutoPlay}
             />
 
-            <PlaybackSpeedButton
-            bind:autoPlayIntervalId={autoPlayIntervalId}
-            bind:playbackSpeedSelectedIndex={playbackSpeedSelectedIndex}
-            {playbackSpeeds}
-            />
+            <PlaybackSpeedButton/>
 
             <FontSizeButton />
-
-            <SettingsButton 
-
-            />
 
         </div>
     </div>
@@ -341,35 +361,22 @@ bind:isCoverPageActive={isCoverPageActive}
 {/if}
 
 <style>
-
-    :global(.btn){
-        background-color: white;
-        border-radius: 2rem;
-        padding: 0 0.3rem 0 0.3rem;
-        display: flex;
-        justify-content: center;
-    }
-    
-    :global(.btn:hover){
-        cursor: pointer;
-    }
-    
-    :global(.zoom-in-out-box) {
-        animation: zoom-in-zoom-out 0.3s ease;
+    .button-bar {
+        position: fixed; 
+        z-index: 2; 
+        display:flex; 
+        justify-content:flex-start; 
+        align-items:end; 
+        bottom: 3vh; 
+        width: 90vw; 
+        margin:0 auto; 
+        left:0;
+        right:0; 
+        border-radius: 100px;  
+        background-color:transparent;
     }
 
-    @keyframes zoom-in-zoom-out {
-            0% {
-                transform: scale(1, 1);
-            }
-            33% {
-                transform: scale(1.2, 1.2);
-            }
-            66% {
-                transform: scale(0.8, 0.8);
-            }
-            100% {
-                transform: scale(1, 1);
-            }
+    :global(.button-bar .btn) {
+        margin-right: 10px;
     }
 </style>

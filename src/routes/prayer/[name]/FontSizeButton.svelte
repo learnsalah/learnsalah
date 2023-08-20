@@ -1,7 +1,7 @@
 
 <script lang="ts">
 
-    import { fontSizeTransliterationText } from '../../../store.js';
+    import { fontSize } from '../../../lib/stores/font/fontStore';
 
     let animateFontSizeButton : Boolean;
 
@@ -15,7 +15,7 @@
 
         // Update the font size
         // Increase the font size by 1
-        fontSizeTransliterationText.update(size => {
+        fontSize.update(size => {
             let newSize = size + 1;
 
             // if newSize is greater than 21, reset to 6

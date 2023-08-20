@@ -1,11 +1,20 @@
 <script lang="ts">
 
     import { createEventDispatcher } from 'svelte';
+    import audioStore from '../../../lib/stores/audio/audioStore';
 
     export let isAutoPlaying : boolean;
-    export let hasActiveAudio : boolean;
     export let showConfirmModal;
     let animateExitCross = false;
+
+    /*
+        Audio Store Variables
+    */
+    let isAudioActive : boolean;
+
+    audioStore.subscribe(storeValues => {
+        isAudioActive = storeValues.isAudioActive;
+    });
 
     const dispatch = createEventDispatcher();
 
@@ -23,7 +32,7 @@
         }
 
         // if audio is active, stop it
-        if (hasActiveAudio) {
+        if (isAudioActive) {
             dispatch('stopAudio');
         }
 

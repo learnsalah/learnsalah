@@ -1,7 +1,7 @@
 <script lang="ts">
 
 
-    import { fontSizeTransliterationText } from '../../../store.js';
+    import { fontSize } from '../../../lib/stores/font/fontStore';
 
     export let prayer;
     export let currentStageIndex : number;
@@ -24,7 +24,7 @@
     </div>
 
     <div class="prayerTransliterationText"
-    style="font-size: {$fontSizeTransliterationText}vmin;"
+    style="font-size: {$fontSize}vmin;"
     >
         {prayer[currentStageIndex].text_transliteration}
     </div>

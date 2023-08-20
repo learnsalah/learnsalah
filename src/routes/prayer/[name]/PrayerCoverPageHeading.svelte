@@ -43,13 +43,7 @@
 
 <style>
     #prayer_intro_header{
-        background-color:none;
         margin-bottom: 30px;
-    }
-
-    img {
-        width: 15vw;
-        background-color:none;
     }
 
 </style>

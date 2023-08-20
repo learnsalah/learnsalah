@@ -17,9 +17,9 @@
                     <a href="/" id="logo">
                         Learn Salah
                     </a>
-                    <code style="font-size: 12px; margin-left:10px;" >
+                    <div class="tag" style="margin-left: 10px;;margin-right: 5px">
                         Beta
-                    </code>
+                    </div>
                 </div>
                 
 
@@ -87,11 +87,12 @@ header{
 #logo {
     color: white;
     text-decoration:none;
-    font-size: 30px;
+    font-size: 1.75rem;
     font-weight: 900;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0 10px 0;
     display: block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 #logo:hover {
@@ -168,6 +169,26 @@ header{
     margin: 0 8px 0 10px;
     vertical-align: middle;
     width: 8px;
+}
+
+.tag {
+    display: inline-block;
+    outline: 2px solid rgba(0,0,0,0);
+    outline-offset: -2px;
+    color: #218c74; /* Set the text color to match the background */
+    background-color: #f4f4f4; /* Lighter shade for contrast */
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: .875rem;
+    line-height: 1;
+    padding-top: 5px;
+    padding-right: 8px;
+    padding-bottom: 5px;
+    padding-left: 8px;
 }
 
 </style>

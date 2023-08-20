@@ -101,7 +101,7 @@
                     <strong>
                         Total donations received:
                         <span style="color:#218c74;">
-                            $205 of $228 (Target)
+                            $315 of $228 (Target)
                         </span>
                     </strong>
 

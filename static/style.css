@@ -42,3 +42,47 @@ a {
 .button:active {
     top: 2px;
 }
+
+.button--secondary {
+    background-color: #dbdad9;
+    color: #1e272e;
+    font-weight: 500;
+
+}
+
+.button--secondary:hover {
+    background-color: #bbbbbb;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+    --primary: #218c74;
+}
+
+input[type='checkbox']:focus,
+input[type='radio']:focus {
+    border-color: #218c74;
+}
+
+.zoom-in-out-box {
+    animation: zoom-in-zoom-out 0.3s ease;
+}
+
+@keyframes zoom-in-zoom-out {
+        0% {
+            transform: scale(1, 1);
+        }
+        33% {
+            transform: scale(1.2, 1.2);
+        }
+        66% {
+            transform: scale(0.8, 0.8);
+        }
+        100% {
+            transform: scale(1, 1);
+        }
+}

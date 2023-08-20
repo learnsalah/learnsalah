@@ -15,6 +15,20 @@ import dua_thana from './dua_thana';
 
 const fajr = [
     ...takbeer,
+    ...alFatihah,
+    ...ruku,
+    ...qayyam,
+    ...sujood,
+    ...alFatihah,
+    ...ruku,
+    ...qayyam,
+    ...sujood2,
+    ...tashahhud,
+    ...taslim
+];
+
+const fajr_sunnah_rituals = [
+    ...takbeer,
     ...dua_thana,
     ...istiadhah, 
     ...alFatihah,
@@ -32,7 +46,32 @@ const fajr = [
     ...taslim
 ];
 
+
 const dhuhr = [
+    ...takbeer,
+    ...alFatihah,
+    ...ruku,
+    ...qayyam,
+    ...sujood,
+    ...alFatihah,
+    ...ruku,
+    ...qayyam,
+    ...sujood2,
+    ...tashahhud,
+    ...takbeer,
+    ...alFatihah,
+    ...ruku,
+    ...qayyam,
+    ...sujood,
+    ...alFatihah,
+    ...ruku,
+    ...qayyam,
+    ...sujood2,
+    ...tashahhud,
+    ...taslim
+];
+
+const dhuhr_sunnah_rituals = [
     ...takbeer,
     ...dua_thana,
     ...istiadhah, 
@@ -62,9 +101,31 @@ const dhuhr = [
 ];
 
 const asr = dhuhr;
+const asr_sunnah_rituals = dhuhr_sunnah_rituals;
 const isha = dhuhr;
+const isha_sunnah_rituals = dhuhr_sunnah_rituals;
 
 const maghrib = [
+    ...takbeer,
+    ...alFatihah,
+    ...ruku,
+    ...qayyam,
+    ...sujood,
+    ...alFatihah,
+    ...ruku,
+    ...qayyam,
+    ...sujood2,
+    ...tashahhud,
+    ...takbeer,
+    ...alFatihah,
+    ...ruku,
+    ...qayyam,
+    ...sujood2,
+    ...tashahhud,
+    ...taslim
+];
+
+const maghrib_sunnah_rituals = [
     ...takbeer,
     ...dua_thana,
     ...istiadhah, 
@@ -89,26 +150,43 @@ const maghrib = [
     ...taslim
 ];
 
+
+
 export const prayers = [
     {
         name : "fajr",
-        prayer: fajr
+        prayer: {
+            bare : fajr,
+            sunnah_rituals : fajr_sunnah_rituals
+        }
     },
     {
         name : "dhuhr",
-        prayer: dhuhr
+        prayer: {
+            bare : dhuhr,
+            sunnah_rituals : dhuhr_sunnah_rituals
+        }
     },
     {
         name : "asr",
-        prayer: asr
+        prayer: {
+            bare : asr,
+            sunnah_rituals : asr_sunnah_rituals
+        }
     },
     {
         name : "maghrib",
-        prayer: maghrib
+        prayer: {
+            bare : maghrib,
+            sunnah_rituals : maghrib_sunnah_rituals
+        }
     },
     {
         name : "isha",
-        prayer: isha
+        prayer: {
+            bare : isha,
+            sunnah_rituals : isha_sunnah_rituals
+        }
     },
 
 ]

@@ -25,7 +25,7 @@
 class="btn"
 on:click={toggleAutoPlay}
 on:keyup={toggleAutoPlay}
-style="margin-right:15px;"
+style="margin-right:25px;"
 >
     {#if isAutoPlaying}
 

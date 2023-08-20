@@ -6,7 +6,6 @@
 <a
     on:click={() => isCoverPageActive = false} 
     on:keyup={() => isCoverPageActive = false}
-    href="#"
     class="button"
 >   
     Pray {prayer_name}

@@ -5,8 +5,13 @@
 	import PrayerTimeIndicator from './PrayerTimeIndicator.svelte';
 	import PrayerStartButton from './PrayerStartButton.svelte';
 	import LocationButton from './LocationButton.svelte';
+    import Modal from './Modal.svelte';
+    import SettingsModal from './SettingsModal.svelte';
+	import SettingsButton from './SettingsButton.svelte';
 
     let prayerTimes = null;
+
+    let showSettingsModal : boolean = false;
 
 </script>
 
@@ -63,6 +68,13 @@
     </div>
 
     <LocationButton bind:prayerTimes={prayerTimes}/>
+
+
+    <SettingsButton bind:showSettingsModal={showSettingsModal}/>
+    <Modal bind:showModal={showSettingsModal}>
+        <a slot="back-link" >back</a> 
+        <SettingsModal/>
+    </Modal>
 
 </main>
 
