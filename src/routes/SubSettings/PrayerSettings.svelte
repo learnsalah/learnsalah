@@ -33,7 +33,7 @@
 
 <hgroup>
     <h2>Prayer Settings</h2>
-    <h3>Customize your prayer preferences.</h3>    
+    <h3>Customise your prayer preferences.</h3>    
 </hgroup>
 
 <hr>
@@ -54,7 +54,7 @@
     </label>
 </fieldset>
 
-<hr style="margin-top:50px">
+<hr style="margin-top:20px">
 
 <hgroup>
     <h6>Sunnah Rak'ahs</h6>
@@ -73,7 +73,7 @@
 </fieldset>
 
 
-<hr style="margin-top:50px">
+<hr style="margin-top:20px">
 
 <hgroup>
     <h6>Gender-Specific Prayer Images</h6>

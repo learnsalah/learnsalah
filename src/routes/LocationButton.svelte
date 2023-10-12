@@ -3,7 +3,27 @@
     import { Coordinates, CalculationMethod, Madhab, PrayerTimes } from 'adhan';
     import { onMount } from 'svelte';
 
+    import prayerTimeStore from '$lib/stores/prayerTime/prayerTimeStore';
+
+    /*
+        Component Props variables
+    */
+
     export let prayerTimes = null;
+
+
+    /*
+        Prayer Time Store Variables
+    */
+    let calculationMethod : string = $prayerTimeStore.calculationMethod;
+    let madhab : string = $prayerTimeStore.madhab;
+
+    console.log(calculationMethod);
+    console.log(madhab);
+
+    /*
+        Component variables
+    */
 
     let timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     let latitude, longitude;
@@ -37,7 +57,7 @@
 
                 // calculate the prayer times
                 const coordinates = new Coordinates(latitude, longitude);
-                const params = CalculationMethod.MuslimWorldLeague();
+                const params = CalculationMethod[calculationMethod]();
                 params.madhab = Madhab.Shafi;
                 const date = new Date();  // get current date
                 prayerTimes = new PrayerTimes(coordinates, date, params);

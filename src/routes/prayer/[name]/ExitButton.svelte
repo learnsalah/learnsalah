@@ -62,5 +62,6 @@ style="z-index:2;">
 <style>
     .exit_btn {
         padding-right: 0;
+        cursor: pointer;
     }
 </style>

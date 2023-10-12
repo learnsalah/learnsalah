@@ -11,9 +11,3 @@
     Pray {prayer_name}
 </a>
 
-<style>
-    a {
-        text-transform: capitalize;
-    }
-</style>
-

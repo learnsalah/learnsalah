@@ -1,6 +1,7 @@
 <script lang="ts">
     import AudioSettings from './SubSettings/AudioSettings.svelte';
     import PrayerSettings from './SubSettings/PrayerSettings.svelte';
+	import PrayerTimeSettings from './SubSettings/PrayerTimeSettings.svelte';
 
     enum SubSettings {
         None,
@@ -27,7 +28,9 @@
 <div class="menu-container">
     {#if isSubSettingsActive}
         {#if activeSubSettings === SubSettings.PrayerSettings} 
-            <PrayerSettings/> 
+            <PrayerSettings/>
+        {:else if activeSubSettings === SubSettings.PrayerTimeSettings}
+            <PrayerTimeSettings/>
         {:else if activeSubSettings === SubSettings.AudioSettings}
             <AudioSettings/>
         {/if}

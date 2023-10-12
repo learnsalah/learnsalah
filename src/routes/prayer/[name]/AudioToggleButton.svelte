@@ -2,7 +2,6 @@
     import { createEventDispatcher } from 'svelte';
     import { afterUpdate } from 'svelte';
     import audioStore from '../../../lib/stores/audio/audioStore';
-    import { get } from 'svelte/store';
 
 
     /*
@@ -30,8 +29,7 @@
         playbackSpeed = storeValues.playbackSpeed;
     });
 
-    const storeValues = get(audioStore);
-    const speaker = storeValues.speaker;
+    const speaker = $audioStore.speaker;
     
     $: audioPath = prayer[currentStageIndex]?.[speaker]?.path;
 

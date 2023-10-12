@@ -57,8 +57,8 @@
 
     .modal-wrapper {
         background-color: #fff;
-        padding: 20px 20px 30px 20px;
-        border-radius: 5px;
+        padding: 20px 20px 20px 20px;
+        border-radius: 10px;
         width: 90vw;
         max-width: 600px;
     }

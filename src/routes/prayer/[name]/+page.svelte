@@ -1,6 +1,5 @@
 <script lang="ts">
     import { onMount, onDestroy } from 'svelte';
-    import { get } from 'svelte/store';
     
     import NoSleep from 'nosleep.js'
 
@@ -23,15 +22,12 @@
 
 
     /*
-        Prayer Settings Variables
+        Prayer Settings Store Variables
     */
-    // Retrieve the current value of the settingsStore
-    const settingsStoreValues = get(settingsStore);
-
     // Extract the values
-    const sunnahRituals = settingsStoreValues.sunnahRituals;
-    const sunnahPrayers = settingsStoreValues.sunnahPrayers;
-    const maleFemaleImage = settingsStoreValues.maleFemaleImage;
+    const sunnahRituals = $settingsStore.sunnahRituals;
+    const sunnahPrayers = $settingsStore.sunnahPrayers;
+    const maleFemaleImage = $settingsStore.maleFemaleImage;
 
     /*
         Audio Store Variables
@@ -46,8 +42,7 @@
         playbackSpeed = storeValues.playbackSpeed;
     });
 
-    const audioStoreValues = get(audioStore);
-    const speaker = audioStoreValues.speaker;
+    const speaker = $audioStore.speaker;
     $: audioDuration = prayer[currentStageIndex]?.[speaker]?.duration;
 
     /*

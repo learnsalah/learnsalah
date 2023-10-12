@@ -139,11 +139,11 @@
 .flashy-border {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adds a transition for smooth effect */
     overflow: hidden; /* To keep the border gradient inside the button */
-    background: linear-gradient(90deg, #218c74 0%, #20bf6b 50%, #218c74 100%);
+    background: linear-gradient(90deg, var(--green) 0%, var(--green_lighter) 50%, var(--green) 100%);
     background-size: 200% auto;
     color: #fff;
-    box-shadow: 0px 0px 16px 0px #20bf6b;
-    border: 2px solid #218c74;
+    box-shadow: 0px 0px 16px 0px var(--green_lighter);
+    border: 2px solid var(--green);
     background-clip: padding-box, border-box; /* Use the background on the border too */
     background-origin: border-box;
     animation: flashy 3s linear infinite;
@@ -151,7 +151,7 @@
 
 .flashy-border:hover, .flashy-border:focus {
     transform: scale(1.05); /* Enlarges the button */
-    box-shadow: 0px 0px 20px 3px #20bf6b; /* Makes the glow effect more intense */
+    box-shadow: 0px 0px 20px 3px var(--green_lighter); /* Makes the glow effect more intense */
 }
 
 @keyframes flashy {

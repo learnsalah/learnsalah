@@ -42,7 +42,7 @@
 </hgroup>
 
 <a
-class="button" style="width:100%;"
+class="button button--secondary" style="width:100%;"
 on:click={onConfirm}
 on:keyup={onConfirm}
 >

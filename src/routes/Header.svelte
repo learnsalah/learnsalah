@@ -11,7 +11,7 @@
 
 <header>
     <div>   
-        <div style="background-color:#218C74;">
+        <div>
             <div class="container" style="display:flex;justify-content:space-between;align-items:stretch;background-color:none;">
                 <div style="display:inline-flex; align-items:center;">
                     <a href="/" id="logo">
@@ -85,7 +85,7 @@ header{
 }
 
 #logo {
-    color: white;
+    color: var(--green);
     text-decoration:none;
     font-size: 1.75rem;
     font-weight: 900;
@@ -102,7 +102,6 @@ header{
     display:flex;
     align-items:center;
     justify-content:center;
-    color:#fff;
 }
 
 .nav-item:hover {
@@ -120,8 +119,8 @@ header{
     -webkit-transform: translateY(-35%) rotate(45deg) scale(1);
     -ms-transform: translateY(-35%) rotate(45deg) scale(1);
     transform: translateY(-35%) rotate(45deg) scale(1);
-    border-bottom: 2px solid #fff;
-    border-right: 2px solid #fff;
+    border-bottom: 2px solid #1e272e;
+    border-right: 2px solid #1e272e;
     content: "";
     display: inline-block;
     height: 8px;
@@ -131,7 +130,7 @@ header{
 }
 
 .nav-item-is-active {
-    background-color: #f3f2f1;
+    background-color: var(--gray);
     color: #1095c1;
 }
 
@@ -145,7 +144,7 @@ header{
 
 .menu-outer {
     padding: 25px 0 25px 0;
-    background-color: #f3f2f1;
+    background-color: var(--gray);
 }
 
 .menu-outer ul {
@@ -175,8 +174,8 @@ header{
     display: inline-block;
     outline: 2px solid rgba(0,0,0,0);
     outline-offset: -2px;
-    color: #218c74; /* Set the text color to match the background */
-    background-color: #f4f4f4; /* Lighter shade for contrast */
+    color: white; /* Set the text color to match the background */
+    background-color: var(--green); /* Lighter shade for contrast */
     letter-spacing: 1px;
     text-decoration: none;
     text-transform: uppercase;
@@ -189,6 +188,8 @@ header{
     padding-right: 8px;
     padding-bottom: 5px;
     padding-left: 8px;
+    border-radius: 6px;
+    opacity: 90%;
 }
 
 </style>

@@ -26,6 +26,6 @@
 </hgroup>
 
 <select id="speaker" bind:value={speaker} on:change={changeSpeaker} required>
-  <option value="audio_1" selected={speaker === 'audio_1'}>Abubakr Elmallah (With Tajweed)</option>
-  <option value="audio_2" selected={speaker === 'audio_2'}>Abubakr Elmallah (Without Tajweed)</option>
+  <option value="audio_1" selected={speaker === 'audio_1'}>Abubakr Elmallah (Arabic, With Tajweed)</option>
+  <option value="audio_2" selected={speaker === 'audio_2'}>Abubakr Elmallah (Arabic, Without Tajweed)</option>
 </select>

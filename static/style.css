@@ -1,3 +1,14 @@
+:root {
+
+    --font-size: 1rem;
+
+    --green: #05c46b;
+    --green_darker: #00954f;
+    --green_lighter: #00b25f;
+
+    --gray: #e5e5e5;
+}
+
 html, body {
     color: #1e272e;
 }
@@ -8,13 +19,14 @@ a {
 
 
 .button {
+    border-radius: 12px;
     text-decoration: none;
     min-width: 200px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-weight: 900;
-    font-size: 1.2rem;
-    line-height: 1.85rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
     box-sizing: border-box;
     display: inline-flex;
     justify-content: center;
@@ -25,18 +37,18 @@ a {
     margin-bottom: 22px;
     padding: 8px 10px 7px;
     border: 2px solid transparent;
-    border-radius: 0;
     color: #fff;
-    background-color: #218c74;
-    box-shadow: 0 2px 0 #1e272e;
+    background-color: var(--green);
+    box-shadow: 0 5px 0 var(--green_darker);
     text-align: center;
     vertical-align: top;
     cursor: pointer;
-    
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .button:hover {
-    background-color: #196756;
+    background-color: var(--green_lighter);
 }
 
 .button:active {
@@ -44,14 +56,14 @@ a {
 }
 
 .button--secondary {
-    background-color: #dbdad9;
-    color: #1e272e;
-    font-weight: 500;
-
+    background-color: #fff;
+    box-shadow: 0 5px 0 var(--gray);
+    border: 2px solid var(--gray);
+    color: #1baaed;
 }
 
 .button--secondary:hover {
-    background-color: #bbbbbb;
+    background-color: #f0f0f0;
 }
 
 a:hover {
@@ -60,12 +72,12 @@ a:hover {
 
 input[type='checkbox'],
 input[type='radio'] {
-    --primary: #218c74;
+    --primary: var(--green);
 }
 
 input[type='checkbox']:focus,
 input[type='radio']:focus {
-    border-color: #218c74;
+    border-color: var(--green);
 }
 
 .zoom-in-out-box {

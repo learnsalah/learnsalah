@@ -9,9 +9,3 @@ class="button"
     Pray {prayer}
 </a>
 
-<style>
-    a {
-        text-transform: capitalize;
-    }
-</style>
-
