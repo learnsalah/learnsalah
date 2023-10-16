@@ -74,7 +74,9 @@
 </script>
 
 {#if prayerTimes === null}
-    <a 
+    <div
+    class="button button--secondary"
+    style="min-width: auto;"
     on:click={getPrayerTimes}
     on:keyup={getPrayerTimes}
     >
@@ -83,11 +85,14 @@
         width="17" height="17"
         alt="location">
 
-        Get Prayer times
-    </a>
+        Prayer times
+    </div>
 {:else}
 
-    <a>
+    <div
+    class="button button--secondary"
+    style="min-width: auto;"
+    >
 
     
         <img 
@@ -97,7 +102,7 @@
 
         {timeZone}
 
-    </a>
+    </div>
 
     {errorMessage}
 

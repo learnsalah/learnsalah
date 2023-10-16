@@ -19,7 +19,9 @@
 </script>
 
 
-<a 
+<div
+class="button button--secondary"
+style="min-width: auto;"
 on:click={openSettings}
 on:keyup={openSettings}
 >
@@ -28,10 +30,8 @@ on:keyup={openSettings}
     width="19"
     height="19"
     alt="settings">
-
-    Change Settings
-
-</a>
+    Settings
+</div>
 
 <style>
     img {

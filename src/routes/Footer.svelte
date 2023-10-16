@@ -52,7 +52,7 @@
 <style>
 
     #sep {
-        border: 20px solid var(--green);
+        border: 10px solid var(--green);
         margin-top: 25vh;
     }
 
