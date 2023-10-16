@@ -1,10 +1,15 @@
 <script lang="ts">
+    import { goto } from '$app/navigation';
     import Header from '../../Header.svelte';
 	import PrayerCoverPageHeading from './PrayerCoverPageHeading.svelte';
 	import PrayerStartButton from './PrayerStartButton.svelte';
 
     export let prayer_name : string;
     export let isCoverPageActive : boolean;
+
+    const back = () => {
+        goto("/")
+    };
 
 </script>
 
@@ -44,9 +49,15 @@
 
             <div style="margin-top: 40px;">
                 <div style="display: flex; justify-content: space-between; align-items:center;">
-                    <a href="/">
+                    <div 
+                    class="button button--secondary"
+                    style="min-width: auto;"
+                    on:click={back}
+                    on:keyup={back}
+                    >
                         back
-                    </a>
+                    </div>
+
                     <PrayerStartButton 
                     prayer_name={prayer_name} 
                     bind:isCoverPageActive={isCoverPageActive}

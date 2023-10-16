@@ -7,6 +7,8 @@
     --green_lighter: #00b25f;
 
     --gray: #e5e5e5;
+    --blue: #19a9eb;
+    --blue_darker: #0879ad;
 }
 
 html, body {
@@ -15,13 +17,20 @@ html, body {
 
 a {
     text-decoration: underline;
+    color: var(--blue);
 }
 
+a:hover {
+    color: var(--blue_darker);
+    cursor: pointer;
+    text-decoration-thickness: max(3px, .1875rem, .12em);
+    text-decoration-skip-ink: none;
+}
 
 .button {
     border-radius: 12px;
     text-decoration: none;
-    min-width: 200px;
+    min-width: 180px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 700;
@@ -57,18 +66,15 @@ a {
 
 .button--secondary {
     background-color: #fff;
-    box-shadow: 0 5px 0 var(--gray);
+    box-shadow: 0 4px 0 var(--gray);
     border: 2px solid var(--gray);
-    color: #1baaed;
+    color: var(--blue);
 }
 
 .button--secondary:hover {
     background-color: #f0f0f0;
 }
 
-a:hover {
-    cursor: pointer;
-}
 
 input[type='checkbox'],
 input[type='radio'] {

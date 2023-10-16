@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { goto } from '$app/navigation';
     import { page } from '$app/stores';
     import Footer from './Footer.svelte';
     import Header from './Header.svelte';
@@ -33,6 +34,10 @@
     let errorMessage = errorMessages[errorCode]?.main || 'Unknown Error';
     let errorSubMessage = errorMessages[errorCode]?.sub || 'An unexpected error occurred.';
 
+    const back = () => {
+        goto("/")
+    };
+
 </script>
 
 <Header/>
@@ -47,9 +52,9 @@
         </h3>
     </hgroup>
 
-    <a href="/">
+    <div class="button button--secondary" on:click={back} on:keyup={back}>
         back to safety
-    </a>
+    </div>
 </div>
 
 <Footer/>

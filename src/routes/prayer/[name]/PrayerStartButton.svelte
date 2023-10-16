@@ -3,11 +3,11 @@
     export let isCoverPageActive : boolean;
 </script>
 
-<a
+<div
     on:click={() => isCoverPageActive = false} 
     on:keyup={() => isCoverPageActive = false}
     class="button"
 >   
     Pray {prayer_name}
-</a>
+</div>
 

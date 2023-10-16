@@ -1,7 +1,5 @@
-
+<div id="sep"></div>
 <footer class="container">
-
-    <hr>
 
     <div>
         <ul>
@@ -30,17 +28,21 @@
         on the Islamic act of devotion - Salah.
     </blockquote>
 
+
     <a href="/" class="footer-end-link">
-        Learn Salah 2023
+        To Top
     </a>
     <a href="https://github.com/learnsalah/learnsalah" target="_blank">
         Source Code
     </a>
-
+    
     <p>
         Source Code is available under the MIT License.
     </p>
 
+    <p>
+        2023 learnsalah.com
+    </p>
 
 
     <div style="margin-bottom: 60px;"></div>
@@ -48,12 +50,14 @@
 </footer>
 
 <style>
-    footer{
+
+    #sep {
+        border: 20px solid var(--green);
         margin-top: 25vh;
     }
-    hr{
-        margin-top: 100px;
-        margin-bottom: 50px;
+
+    footer{
+        padding-top: 60px;
     }
 
     ul{

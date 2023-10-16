@@ -41,13 +41,13 @@
     <h5>Any progress on this prayer will be lost.</h5>
 </hgroup>
 
-<a
-class="button button--secondary" style="width:100%;"
+<div
+class="button button--secondary" 
 on:click={onConfirm}
 on:keyup={onConfirm}
 >
     End Prayer
-</a>
+</div>
 
 
 
